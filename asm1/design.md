@@ -6,3 +6,8 @@
 - bridges are not allowed to cross each other, or other islands
 - there can be no more than three bridges connecting any pair of islands
 - the total number of bridges connected to each island must be equal to the number on the island
+
+# Problems:
+- For node with 1 connectable nodes, connect and exhaust node capacity.
+- For nodes with > 1 connectable nodes, we need to check the amount of valid connections it may establish.
+    -   More specifically, 
