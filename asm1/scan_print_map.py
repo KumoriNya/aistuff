@@ -10,6 +10,12 @@ nrow = 0
 ncol = 0
 code = ".123456789abc"
 nodes = []
+# bridge = {
+#     'ends'  : [node_0, node_1],
+#     'val'   : int < 0,
+#     'is_hor': Bool,
+# }
+bridges = []
 MAX_BRIDGE_NUM = 3
 
 def find_vert(x, y, i_map, nrow):
@@ -50,7 +56,6 @@ def find_hori(x, y, i_map, ncol):
             break
     return vert_neightbours
 
-
 # Given a pair of coordinates representing the an island, find its direct connectable neighbours. 
 def find_neighbours(coord, i_map, nrow, ncol):
     x = int(coord[0])
@@ -63,10 +68,11 @@ def find_neighbours(coord, i_map, nrow, ncol):
 
 def check_lemma(node):
     print(f"Checking for {node}")
-    return len(node['neighbours']) == 1 or (
-        node['capacity']
-        > ((len(node['neighbours']) - 1) * MAX_BRIDGE_NUM)
-    )
+    return len(node['neighbours']) == 1 or (node['capacity'] > ((len(node['neighbours']) - 1) * MAX_BRIDGE_NUM))
+
+def iterative_check(node):
+    # Check existing
+    return 0
 
 def find_node(node):
     for idx, n in enumerate(nodes):
@@ -75,6 +81,7 @@ def find_node(node):
 
 
 def build_bridge(node_0, node_1, idx, i_map, val):
+    print(f"Trying to build bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]}")
     (x0, y0) = node_0
     (x1, y1) = node_1
     bridge_range = []
@@ -95,10 +102,22 @@ def build_bridge(node_0, node_1, idx, i_map, val):
         quit()
     idx_1 = find_node(node_1)
     nodes[idx]['capacity'] += val
+    if (nodes[idx]['capacity'] == 0):
+        # Current node satisfied. Remove it from others list
+        find_current_node_position_in_neighbours_storage(nodes[idx])
     nodes[idx_1]['capacity'] += val
+    if (nodes[idx_1]['capacity'] == 0):
+        # Remove it from others list
+        find_current_node_position_in_neighbours_storage(nodes[idx_1])
     return 0
 
-
+def find_current_node_position_in_neighbours_storage(node):
+    for neighbour in node['neighbours']:
+        nodes[neighbour['position']]['neighbours'].remove({
+            'node': node['xy'],
+            'position': node['position']
+        })
+        
 
 def print_map(nrow, ncol, i_map):
     for r in range(nrow):
@@ -120,6 +139,7 @@ def main():
                     'neighbours': find_neighbours((r, c), i_map, nrow, ncol),
                     # 'neighbour_of': [],
                     'is_completed': False,
+                    'position': len(nodes),
                     # 'bridges': []
                 })
                 # cur_node = nodes[len(nodes) - 1]
@@ -142,23 +162,24 @@ def main():
         node['neighbours'] = new
     for node in nodes:
         print(node)
-    init_complete = True
+    init_complete = False
     while (not init_complete):
         init_complete = True
         for idx, node in enumerate(nodes):
-            print(f"Scanning, node #{idx}: {node}")
+            # May also want to update check_lemma to iterate using the list of dict
             if check_lemma(node):
                 print(f"Node: {node['xy']} satisfies lemma. Building bridges.")
                 init_complete = False
                 neighbours = node['neighbours']
                 if len(neighbours) == 1:
-                    build_bridge(node['xy'], neighbours[0], idx, i_map, -node['capacity'])
-                for neighbour in neighbours:
-                    build_bridge(node['xy'], neighbour, idx, i_map, -1)
-                    # node['bridges'].append({
-                    #     'node': neighbour,
-                    #     'val' : cur_node['capacity'],
-                    # })
+                    build_bridge(node['xy'], neighbours[0]['node'], idx, i_map, -node['capacity'])
+                else:
+                    for neighbour in neighbours:
+                        build_bridge(node['xy'], neighbour['node'], idx, i_map, -1)
+                        # node['bridges'].append({
+                        #     'node': neighbour,
+                        #     'val' : cur_node['capacity'],
+                        # })
                 print_map(nrow, ncol, i_map)
                 print()
             else:
