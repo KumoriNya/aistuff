@@ -91,7 +91,7 @@ def bridge_contains(node_0, node_1, bridges):
     return -1
 # idx = idx of node_0
 def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
-    print(f"Trying to build bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]}")
+    # print(f"Trying to build bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]}")
     (x0, y0) = node_0
     (x1, y1) = node_1
     bridge_range = []
@@ -108,7 +108,7 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
         for i in vertical_bridge_range:
             i_map[i, y0] = val
     else:
-        print(f"Error, bridge cannot be built")
+        # print(f"Error, bridge cannot be built")
         quit()
     # Update status
     ends = []
@@ -125,7 +125,7 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
             'val'   : val,
             'is_hor': x0==x1,
         })
-    print(f"Updating neighbours on the side of ends: {ends}")
+    # print(f"Updating neighbours on the side of ends: {ends}")
     if (x0==x1):
         for i in range(ends[0][1]+1,ends[1][1]):
             print(f"{(x0, i)}")
@@ -140,7 +140,7 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
     nodes[idx]['capacity'] += val
     nodes[idx_1]['capacity'] += val
 
-    print(f"Bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]} built\nAffected nodes:\n\t{nodes[idx]}\n\t{nodes[idx_1]}\nBridge:\n\t{bridges[bridge_idx]}\n============\n")
+    # print(f"Bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]} built\nAffected nodes:\n\t{nodes[idx]}\n\t{nodes[idx_1]}\nBridge:\n\t{bridges[bridge_idx]}\n============\n")
 
     if (bridges[bridge_idx]['val'] == -3):
         remove_for_max_bridge(nodes[idx], nodes[idx_1])
@@ -228,7 +228,7 @@ def print_map(nrow, ncol, i_map):
                 print_bridge(r,c)
         print()
 
-def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j):
+def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
     # # Content from last iteration
     # nodes = node_dict_list[-1]['nodes']
     # bridges = bridge_dict_list[-1]['bridges']
@@ -236,6 +236,7 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j):
     bridges = bridge_dict_list
     # Make own 
     operation = []
+
     # Base Case: all solved
     fin = True
     for node in nodes:
@@ -244,85 +245,106 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j):
     if fin:
         return True
 
-    print(f"||||||i = {i}; j = {j}||||||")
-    node = nodes[i]
-    print(f"Node: {node}")
-    neighbours = node['neighbours']
-    if (j == len(neighbours)):
-        i = i + 1
-        j = -1
+    # If not solved and remaining nodes are finished, Early exit
+    ee = True
+    for tmp in range(i, len(nodes)):
+        if not nodes[tmp]['is_completed']:
+            ee = False
+    if (ee):
+        return False
 
-    for b in range(0,3):
-        if b == 0:
-            print(f"Try no bridge=======================")
-            # Try continue with no bridge
-            return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-        bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
-        neighbour = neighbours[j]
-        print(f"Neighbour: {neighbour}")
-        if b == 1:
-            print(f"Try 1 bridge=======================")
-            # Try continue with 1 bridge
-            if bridge_idx == -1:
-                build_bridge(node['xy'], neighbour['node'], find_node(node['xy']), i_map, -1, nrow, ncol, nodes, bridges)
-            return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-        if b == 2:
-            print(f"Try 2 bridge=======================")
-            # Try continue with 2 bridges
-            bridge_val = bridges[bridge_idx]['val']
-            if bridge_val == -1:
-                build_bridge(node['xy'], neighbour['node'], find_node(node['xy']), i_map, -2, nrow, ncol, nodes, bridges)
-            return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-        if b == 3:
-            print(f"Try 3 bridge=======================")
-            # Try continue with 3 bridges
-            if bridge_val == -2:
-                build_bridge(node['xy'], neighbour['node'], find_node(node['xy']), i_map, -3, nrow, ncol, nodes, bridges)
-            return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
+    if (is_test):
+        print(f"========check {i}th node with its {j}th neighbour========")
+    # For Each Node, try BFS
+    while i < len(nodes):
+        node = nodes[i]
+        if (is_test):
+            print(f"Start DFS,\n\tNode: {node}")
+        neighbours = node['neighbours']
+        # Early exit to next node if current island is finished (neighbour idx == array length)
+        if (j >= len(neighbours)):
+            if (is_test):
+                print(f"Exceeded node's neighbour")
+            i = i + 1
+            j = 0
+            if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
+                return True
+        # Current neighbour is available, try different options
+        else:
+            for b in range(0, 4):
+                # If a neighbour is finished from iteration, the neighbour is removed from the list, hence minus
+                if (len(node['neighbours']) == 0 and node['capacity'] == 0):
+                    if (is_test):
+                        print(f"Node:\n\t{node} has finished during iteration")
+                    if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i + 1, 0, is_test):
+                        return True
+                    return False
+                elif (len(node['neighbours']) == 0 and node['capacity'] > 0):
+                    return False
+                while (j >= len(neighbours)):
+                    j -= 1
+                print(f"J = {j}; Node:\n\t{node}")
+                neighbour = neighbours[j]
+                # Start with no bridge
+                if b == 0:
+                    if (is_test):
+                        print(f"From {node['xy']} to {neighbour['node']} Try no bridge=======================")
+                    # Try continue with no bridge
+                    if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
+                        return True
+                bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
+                # Build one bridge from node to neighbour and pass this on to next neighbour / node
+                if b == 1:
+                    if (is_test):
+                        print(f"\n\nNo bridge from {node['xy']} to {neighbour['node']} failed")
+                        print(f"From {node['xy']} to {neighbour['node']} Try 1 bridge=======================")
+                    # Only build one bridge if no bridge has been built
+                    if bridge_idx == -1:
+                        build_bridge(node['xy'], neighbour['node'], find_node(node['xy'], nodes), i_map, -1, nrow, ncol, nodes, bridges)
+                        if (is_test):
+                            print_map(nrow, ncol, i_map)
+                    else:
+                        if (is_test):
+                            print("Bridge exists. Skipped")
+                    if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
+                        return True
+                if b == 2:
+                    if (is_test):
+                        print(f"\n\nOne bridge from {node['xy']} to {neighbour['node']} failed")
+                        print(f"From {node['xy']} to {neighbour['node']} Try 2 bridge=======================")
+                    # Only build the second bridge if there is currently exactly one bridge
+                    bridge_val = bridges[bridge_idx]['val']
+                    if bridge_val == -1:
+                        build_bridge(node['xy'], neighbour['node'], find_node(node['xy'], nodes), i_map, -1, nrow, ncol, nodes, bridges)
+                        if (is_test):
+                            print_map(nrow, ncol, i_map)
+                    else:
+                        print("Bridge exists. Skipped")
+                    if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
+                        return True
+                if b == 3:
+                    if (is_test):
+                        print(f"\n\nTwo bridge from {node['xy']} to {neighbour['node']} failed")
+                        print(f"From {node['xy']} to {neighbour['node']} Try 3 bridge=======================")
+                    # Only build the thrid bridge if there is currently exactly two bridges
+                    if bridge_val == -2:
+                        build_bridge(node['xy'], neighbour['node'], find_node(node['xy'], nodes), i_map, -1, nrow, ncol, nodes, bridges)
+                        if (is_test):
+                            print_map(nrow, ncol, i_map)
+                    else:
+                        if (is_test):
+                            print("Bridge exists. Skipped")
+                    if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
+                        return True
 
-    # for node in nodes:
-    #     if (not node['is_completed']):
-    #         print(f"Iterating Incompleted Node\n\t{node}")
-    #         for neighbour in node['neighbours']:
-    #             print(f"With neighbour:\n\t{neighbour}")
-    #             for b in range(0,3):
-    #                 bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
-    #                 if b == 0:
-    #                     print(f"Try no bridge=======================")
-    #                     # Try continue with no bridge
-    #                     return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-    #                 if b == 1:
-    #                     print(f"Try 1 bridge=======================")
-    #                     # Try continue with 1 bridge
-    #                     if bridge_idx == -1:
-    #                         build_bridge(node['xy'], neighbour['node'], find_node(node['xy']), i_map, -1, nrow, ncol, nodes, bridges)
-    #                     return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-    #                 if b == 2:
-    #                     print(f"Try 2 bridge=======================")
-    #                     # Try continue with 2 bridges
-    #                     bridge_val = bridges[bridge_idx]['val']
-    #                     if bridge_val == -1:
-    #                         build_bridge(node['xy'], neighbour['node'], find_node(node['xy']), i_map, -2, nrow, ncol, nodes, bridges)
-    #                     return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-    #                 if b == 3:
-    #                     print(f"Try 3 bridge=======================")
-    #                     # Try continue with 3 bridges
-    #                     if bridge_val == -2:
-    #                         build_bridge(node['xy'], neighbour['node'], find_node(node['xy']), i_map, -3, nrow, ncol, nodes, bridges)
-    #                     return solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1)
-
-                # Try build new bridge
-                # Or
-                # Try increment one bridge
-
-    # Try to build bridges such that new bridge
-    # if solve()
-    print("in solve")
+    if (is_test):
+        print(f"\n==============In solve, checking at {i}th node and {j}th neighbour================")
+    
     for node in nodes:
-        # if (not node['is_completed']):
-        #     return False
-        print(node)
-    return False
+        if (not node['is_completed']):
+            return False
+
+    return True
 
 def main():
     nrow, ncol, i_map = scan_map()
@@ -358,19 +380,19 @@ def main():
             # })
         node['neighbours'] = new
 
-    print(f"Initialisation complete:")
-    for node in nodes:
-        print(node)
+    # print(f"Initialisation complete:")
+    # for node in nodes:
+    #     print(node)
     # For all nodes, try apply the lemma to link islands that must be connected before applying other search strategies
     init_complete = False
     while (not init_complete):
         init_complete = True
         ccc+=1
-        print(f"\n\nIterating\n\n")
+        # print(f"\n\nIterating\n\n")
         for idx, node in enumerate(nodes):
             # May also want to update check_lemma to iterate using the list of dict
             if check_lemma(node):
-                print(f"Node: {node['xy']} satisfies lemma. Building bridges.")
+                # print(f"Node: {node['xy']} satisfies lemma. Building bridges.")
                 init_complete = False
                 neighbours = node['neighbours']
                 if len(neighbours) == 1:
@@ -380,20 +402,18 @@ def main():
                         build_bridge(node['xy'], neighbour['node'], idx, i_map, -3, nrow, ncol, nodes, bridges)
                 elif (node['value'] == (len(node['neighbours']) * MAX_BRIDGE_NUM)):
                     for neighbour in neighbours:
-                        if(node['xy']==(8,6)):
-                            print(f"\tCurrent neighbour:{neighbour}")
-                            print(f"\tFull list: {neighbours}")
                         bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
                         if bridge_idx > -1:
-                            print(f"OVERWRITING EXISTING BRIDGE:\n\t{bridges[bridge_idx]}\n")
+                            # print(f"OVERWRITING EXISTING BRIDGE:\n\t{bridges[bridge_idx]}\n")
                             build_bridge(node['xy'], neighbour['node'], idx, i_map, -3 - bridges[bridge_idx]['val'], nrow, ncol, nodes, bridges)
                         else:
                             build_bridge(node['xy'], neighbour['node'], idx, i_map, -3, nrow, ncol, nodes, bridges)
                 else:
                     for neighbour in neighbours:
                         build_bridge(node['xy'], neighbour['node'], idx, i_map, -1, nrow, ncol, nodes, bridges)
-                print_map(nrow, ncol, i_map)
-                print()
+                # Post-Lemma Pre-DFS map result
+                # print_map(nrow, ncol, i_map)
+                # print()
             else:
                 print("Lemma unsatisfied\n")
     
@@ -416,8 +436,9 @@ def main():
         'iter'  : 0,
     })
     print(f"dfs nodes: {dfs_nodes}\ndfs bridges: {dfs_bridges}")
-    sys.setrecursionlimit(10000)
-    if (solve(i_map, nodes, bridges, nrow, ncol, 0, 0)):
+    sys.setrecursionlimit(100)
+    tuning = False
+    if (solve(i_map, nodes, bridges, nrow, ncol, 0, 0, tuning)):
         print("SUCCESS")
     # if (solve(i_map, dfs_nodes, dfs_bridges, nrow, ncol)):
     #     print("SUCCESS")

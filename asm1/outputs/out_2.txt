@@ -30,33 +30,33 @@ All neighbours for (6, 2) = 7: [(6, 0), (6, 5), (4, 2)]
 Finding for (6, 5) = 6
 All neighbours for (6, 5) = 6: [(6, 2), (4, 5)]
 Initialisation complete:
-{'xy': (0, 0), 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
-{'xy': (0, 2), 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
-{'xy': (0, 5), 'capacity': 5, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
-{'xy': (2, 0), 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
-{'xy': (2, 2), 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
-{'xy': (2, 5), 'capacity': 6, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
-{'xy': (4, 0), 'capacity': 7, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
-{'xy': (4, 2), 'capacity': 7, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
-{'xy': (4, 5), 'capacity': 8, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
-{'xy': (6, 0), 'capacity': 6, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
-{'xy': (6, 2), 'capacity': 7, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
-{'xy': (6, 5), 'capacity': 6, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+{'xy': (0, 2), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+{'xy': (0, 5), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+{'xy': (2, 0), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+{'xy': (2, 5), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+{'xy': (4, 0), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+{'xy': (4, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
+{'xy': (4, 5), 'value': 8, 'capacity': 8, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+{'xy': (6, 0), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
+{'xy': (6, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+{'xy': (6, 5), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
 
 
 Iterating
 
 
 Checking for
-	{'xy': (0, 0), 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+	{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (0, 2), 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+	{'xy': (0, 2), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (0, 5), 'capacity': 5, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (0, 5), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
 Node: (0, 5) satisfies lemma. Building bridges.
 Trying to build bridge from (0, 5) = 5 to (0, 2) = 6
 Updating neighbours on the side of ends: [(0, 2), (0, 5)]
@@ -66,10 +66,12 @@ Updating neighbours on the side of ends: [(0, 2), (0, 5)]
 []
 Bridge from (0, 5) = 5 to (0, 2) = 6 built
 Affected nodes:
-	{'xy': (0, 5), 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
-	{'xy': (0, 2), 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Bridge:
 	{'ends': [(0, 2), (0, 5)], 'val': -1, 'is_hor': True}
+============
+
 Trying to build bridge from (0, 5) = 5 to (2, 5) = 6
 Updating neighbours on the side of ends: [(0, 5), (2, 5)]
 1 5
@@ -77,10 +79,12 @@ Updating neighbours on the side of ends: [(0, 5), (2, 5)]
 []
 Bridge from (0, 5) = 5 to (2, 5) = 6 built
 Affected nodes:
-	{'xy': (0, 5), 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
-	{'xy': (2, 5), 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
 Bridge:
 	{'ends': [(0, 5), (2, 5)], 'val': -1, 'is_hor': False}
+============
+
 2.6--5.
 .....|.
 5.7..6.
@@ -90,19 +94,19 @@ Bridge:
 6.7..6.
 
 Checking for
-	{'xy': (2, 0), 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+	{'xy': (2, 0), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (2, 2), 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (2, 5), 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (4, 0), 'capacity': 7, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+	{'xy': (4, 0), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
 Node: (4, 0) satisfies lemma. Building bridges.
 Trying to build bridge from (4, 0) = 7 to (4, 2) = 7
 Updating neighbours on the side of ends: [(4, 0), (4, 2)]
@@ -110,10 +114,12 @@ Updating neighbours on the side of ends: [(4, 0), (4, 2)]
 []
 Bridge from (4, 0) = 7 to (4, 2) = 7 built
 Affected nodes:
-	{'xy': (4, 0), 'capacity': 6, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
-	{'xy': (4, 2), 'capacity': 6, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 0), 'value': 7, 'capacity': 6, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+	{'xy': (4, 2), 'value': 7, 'capacity': 6, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
 Bridge:
 	{'ends': [(4, 0), (4, 2)], 'val': -1, 'is_hor': True}
+============
+
 Trying to build bridge from (4, 0) = 7 to (2, 0) = 5
 Updating neighbours on the side of ends: [(2, 0), (4, 0)]
 3 0
@@ -121,10 +127,12 @@ Updating neighbours on the side of ends: [(2, 0), (4, 0)]
 []
 Bridge from (4, 0) = 7 to (2, 0) = 5 built
 Affected nodes:
-	{'xy': (4, 0), 'capacity': 5, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
-	{'xy': (2, 0), 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+	{'xy': (4, 0), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
 Bridge:
 	{'ends': [(2, 0), (4, 0)], 'val': -1, 'is_hor': False}
+============
+
 Trying to build bridge from (4, 0) = 7 to (6, 0) = 6
 Updating neighbours on the side of ends: [(4, 0), (6, 0)]
 5 0
@@ -132,10 +140,12 @@ Updating neighbours on the side of ends: [(4, 0), (6, 0)]
 []
 Bridge from (4, 0) = 7 to (6, 0) = 6 built
 Affected nodes:
-	{'xy': (4, 0), 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
-	{'xy': (6, 0), 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
+	{'xy': (4, 0), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+	{'xy': (6, 0), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
 Bridge:
 	{'ends': [(4, 0), (6, 0)], 'val': -1, 'is_hor': False}
+============
+
 2.6--5.
 .....|.
 5.7..6.
@@ -145,11 +155,11 @@ Bridge:
 6.7..6.
 
 Checking for
-	{'xy': (4, 2), 'capacity': 6, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 2), 'value': 7, 'capacity': 6, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (4, 5), 'capacity': 8, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+	{'xy': (4, 5), 'value': 8, 'capacity': 8, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
 Node: (4, 5) satisfies lemma. Building bridges.
 Trying to build bridge from (4, 5) = 8 to (4, 2) = 7
 Updating neighbours on the side of ends: [(4, 2), (4, 5)]
@@ -159,10 +169,12 @@ Updating neighbours on the side of ends: [(4, 2), (4, 5)]
 []
 Bridge from (4, 5) = 8 to (4, 2) = 7 built
 Affected nodes:
-	{'xy': (4, 5), 'capacity': 7, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
-	{'xy': (4, 2), 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 5), 'value': 8, 'capacity': 7, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
 Bridge:
 	{'ends': [(4, 2), (4, 5)], 'val': -1, 'is_hor': True}
+============
+
 Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
 Updating neighbours on the side of ends: [(2, 5), (4, 5)]
 3 5
@@ -170,10 +182,12 @@ Updating neighbours on the side of ends: [(2, 5), (4, 5)]
 []
 Bridge from (4, 5) = 8 to (2, 5) = 6 built
 Affected nodes:
-	{'xy': (4, 5), 'capacity': 6, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
-	{'xy': (2, 5), 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (4, 5), 'value': 8, 'capacity': 6, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
 Bridge:
 	{'ends': [(2, 5), (4, 5)], 'val': -1, 'is_hor': False}
+============
+
 Trying to build bridge from (4, 5) = 8 to (6, 5) = 6
 Updating neighbours on the side of ends: [(4, 5), (6, 5)]
 5 5
@@ -181,10 +195,12 @@ Updating neighbours on the side of ends: [(4, 5), (6, 5)]
 []
 Bridge from (4, 5) = 8 to (6, 5) = 6 built
 Affected nodes:
-	{'xy': (4, 5), 'capacity': 5, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
-	{'xy': (6, 5), 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+	{'xy': (4, 5), 'value': 8, 'capacity': 5, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+	{'xy': (6, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
 Bridge:
 	{'ends': [(4, 5), (6, 5)], 'val': -1, 'is_hor': False}
+============
+
 2.6--5.
 .....|.
 5.7..6.
@@ -194,7 +210,7 @@ Bridge:
 6.7..6.
 
 Checking for
-	{'xy': (6, 0), 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
+	{'xy': (6, 0), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
 Node: (6, 0) satisfies lemma. Building bridges.
 Trying to build bridge from (6, 0) = 6 to (6, 2) = 7
 Updating neighbours on the side of ends: [(6, 0), (6, 2)]
@@ -202,36 +218,64 @@ Updating neighbours on the side of ends: [(6, 0), (6, 2)]
 []
 Bridge from (6, 0) = 6 to (6, 2) = 7 built
 Affected nodes:
-	{'xy': (6, 0), 'capacity': 4, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
-	{'xy': (6, 2), 'capacity': 6, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+	{'xy': (6, 0), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
+	{'xy': (6, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
 Bridge:
-	{'ends': [(6, 0), (6, 2)], 'val': -1, 'is_hor': True}
-Trying to build bridge from (6, 0) = 6 to (4, 0) = 7
-Updating neighbours on the side of ends: [(4, 0), (6, 0)]
-5 0
-(5, 0)
-[]
-Bridge from (6, 0) = 6 to (4, 0) = 7 built
-Affected nodes:
-	{'xy': (6, 0), 'capacity': 3, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
-	{'xy': (4, 0), 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
-Bridge:
-	{'ends': [(4, 0), (6, 0)], 'val': -2, 'is_hor': False}
+	{'ends': [(6, 0), (6, 2)], 'val': -3, 'is_hor': True}
+============
+
 2.6--5.
 .....|.
 5.7..6.
 |....|.
 7-7--8.
-"....|.
-6-7..6.
+|....|.
+6E7..6.
 
 Checking for
-	{'xy': (6, 2), 'capacity': 6, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
-Lemma unsatisfied
+	{'xy': (6, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+Node: (6, 2) satisfies lemma. Building bridges.
+Trying to build bridge from (6, 2) = 7 to (6, 5) = 6
+Updating neighbours on the side of ends: [(6, 2), (6, 5)]
+(6, 3)
+[]
+(6, 4)
+[]
+Bridge from (6, 2) = 7 to (6, 5) = 6 built
+Affected nodes:
+	{'xy': (6, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+	{'xy': (6, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+Bridge:
+	{'ends': [(6, 2), (6, 5)], 'val': -1, 'is_hor': True}
+============
+
+Trying to build bridge from (6, 2) = 7 to (4, 2) = 7
+Updating neighbours on the side of ends: [(4, 2), (6, 2)]
+5 2
+(5, 2)
+[]
+Bridge from (6, 2) = 7 to (4, 2) = 7 built
+Affected nodes:
+	{'xy': (6, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
+Bridge:
+	{'ends': [(4, 2), (6, 2)], 'val': -1, 'is_hor': False}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+|.|..|.
+6E7--6.
 
 Checking for
-	{'xy': (6, 5), 'capacity': 5, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+	{'xy': (6, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
 Node: (6, 5) satisfies lemma. Building bridges.
+OVERWRITING EXISTING BRIDGE:
+	{'ends': [(6, 2), (6, 5)], 'val': -1, 'is_hor': True}
+
 Trying to build bridge from (6, 5) = 6 to (6, 2) = 7
 Updating neighbours on the side of ends: [(6, 2), (6, 5)]
 (6, 3)
@@ -240,28 +284,27 @@ Updating neighbours on the side of ends: [(6, 2), (6, 5)]
 []
 Bridge from (6, 5) = 6 to (6, 2) = 7 built
 Affected nodes:
-	{'xy': (6, 5), 'capacity': 4, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
-	{'xy': (6, 2), 'capacity': 5, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+	{'xy': (6, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+	{'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
 Bridge:
-	{'ends': [(6, 2), (6, 5)], 'val': -1, 'is_hor': True}
-Trying to build bridge from (6, 5) = 6 to (4, 5) = 8
-Updating neighbours on the side of ends: [(4, 5), (6, 5)]
-5 5
-(5, 5)
-[]
-Bridge from (6, 5) = 6 to (4, 5) = 8 built
-Affected nodes:
-	{'xy': (6, 5), 'capacity': 3, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
-	{'xy': (4, 5), 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
-Bridge:
-	{'ends': [(4, 5), (6, 5)], 'val': -2, 'is_hor': False}
+	{'ends': [(6, 2), (6, 5)], 'val': -3, 'is_hor': True}
+============
+
+Removing
+	{'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+	from:
+[{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}]
+Removed
+	{'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
+from
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
 2.6--5.
 .....|.
 5.7..6.
 |....|.
 7-7--8.
-"....".
-6-7--6.
+|.|..|.
+6E7EE6.
 
 
 
@@ -269,80 +312,2151 @@ Iterating
 
 
 Checking for
-	{'xy': (0, 0), 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+	{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (0, 2), 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (0, 5), 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (2, 0), 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (2, 2), 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (2, 5), 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (4, 0), 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+	{'xy': (4, 0), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (4, 2), 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (4, 5), 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+	{'xy': (4, 5), 'value': 8, 'capacity': 5, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
 Lemma unsatisfied
 
 Checking for
-	{'xy': (6, 0), 'capacity': 3, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
-Lemma unsatisfied
+	{'xy': (6, 0), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
+Node: (6, 0) satisfies lemma. Building bridges.
+Trying to build bridge from (6, 0) = 6 to (4, 0) = 7
+Updating neighbours on the side of ends: [(4, 0), (6, 0)]
+5 0
+(5, 0)
+[]
+Bridge from (6, 0) = 6 to (4, 0) = 7 built
+Affected nodes:
+	{'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
+Bridge:
+	{'ends': [(4, 0), (6, 0)], 'val': -3, 'is_hor': False}
+============
 
-Checking for
-	{'xy': (6, 2), 'capacity': 5, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
-Lemma unsatisfied
-
-Checking for
-	{'xy': (6, 5), 'capacity': 3, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
-Lemma unsatisfied
-
+Removing
+	{'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': False, 'position': 9}
+	from:
 2.6--5.
 .....|.
 5.7..6.
 |....|.
 7-7--8.
-"....".
-6-7--6.
+#.|..|.
+6E7EE6.
 
-{'xy': (0, 0), 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
-{'xy': (0, 2), 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
-{'xy': (0, 5), 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
-{'xy': (2, 0), 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
-{'xy': (2, 2), 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
-{'xy': (2, 5), 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
-{'xy': (4, 0), 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}, {'node': (6, 0), 'position': 9}], 'is_completed': False, 'position': 6}
-{'xy': (4, 2), 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}, {'node': (6, 2), 'position': 10}], 'is_completed': False, 'position': 7}
-{'xy': (4, 5), 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
-{'xy': (6, 0), 'capacity': 3, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 9}
-{'xy': (6, 2), 'capacity': 5, 'neighbours': [{'node': (6, 0), 'position': 9}, {'node': (6, 5), 'position': 11}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 10}
-{'xy': (6, 5), 'capacity': 3, 'neighbours': [{'node': (6, 2), 'position': 10}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
-{'ends': [(0, 2), (0, 5)], 'val': -1, 'is_hor': True}
-{'ends': [(0, 5), (2, 5)], 'val': -1, 'is_hor': False}
+Checking for
+	{'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (6, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+Node: (6, 5) satisfies lemma. Building bridges.
+Trying to build bridge from (6, 5) = 6 to (4, 5) = 8
+Updating neighbours on the side of ends: [(4, 5), (6, 5)]
+5 5
+(5, 5)
+[]
+Bridge from (6, 5) = 6 to (4, 5) = 8 built
+Affected nodes:
+	{'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 11}
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}, {'node': (6, 5), 'position': 11}], 'is_completed': False, 'position': 8}
+Bridge:
+	{'ends': [(4, 5), (6, 5)], 'val': -3, 'is_hor': False}
+============
+
+Removing
+	{'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': False, 'position': 11}
+	from:
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+
+Iterating
+
+
+Checking for
+	{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Lemma unsatisfied
+
+Checking for
+	{'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Lemma unsatisfied
+
+dfs nodes: [{'nodes': [{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}, {'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}, {'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}, {'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}, {'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}, {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}, {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}, {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}, {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}, {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}, {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}, {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}], 'iter': 0}]
+dfs bridges: [{'bridges': [{'ends': [(0, 2), (0, 5)], 'val': -1, 'is_hor': True}, {'ends': [(0, 5), (2, 5)], 'val': -1, 'is_hor': False}, {'ends': [(4, 0), (4, 2)], 'val': -1, 'is_hor': True}, {'ends': [(2, 0), (4, 0)], 'val': -1, 'is_hor': False}, {'ends': [(4, 0), (6, 0)], 'val': -3, 'is_hor': False}, {'ends': [(4, 2), (4, 5)], 'val': -1, 'is_hor': True}, {'ends': [(2, 5), (4, 5)], 'val': -1, 'is_hor': False}, {'ends': [(4, 5), (6, 5)], 'val': -3, 'is_hor': False}, {'ends': [(6, 0), (6, 2)], 'val': -3, 'is_hor': True}, {'ends': [(6, 2), (6, 5)], 'val': -3, 'is_hor': True}, {'ends': [(4, 2), (6, 2)], 'val': -1, 'is_hor': False}], 'iter': 0}]
+========check 0th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+J = 0; Node:
+	{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+From (0, 0) to (0, 2) Try no bridge=======================
+========check 0th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+J = 1; Node:
+	{'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+From (0, 0) to (2, 0) Try no bridge=======================
+========check 0th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (0, 0), 'value': 2, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+Exceeded node's neighbour
+========check 1th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+J = 0; Node:
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+From (0, 2) to (0, 0) Try no bridge=======================
+========check 1th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+J = 1; Node:
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+From (0, 2) to (0, 5) Try no bridge=======================
+========check 1th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+J = 2; Node:
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+From (0, 2) to (2, 2) Try no bridge=======================
+========check 1th node with its 3th neighbour========
+Start DFS,
+	Node: {'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Exceeded node's neighbour
+========check 2th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+J = 0; Node:
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+From (0, 5) to (0, 2) Try no bridge=======================
+========check 2th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+J = 1; Node:
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+From (0, 5) to (2, 5) Try no bridge=======================
+========check 2th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Exceeded node's neighbour
+========check 3th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+J = 0; Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+From (2, 0) to (2, 2) Try no bridge=======================
+========check 3th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+J = 1; Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+From (2, 0) to (0, 0) Try no bridge=======================
+========check 3th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+J = 2; Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+From (2, 0) to (4, 0) Try no bridge=======================
+========check 3th node with its 3th neighbour========
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+Exceeded node's neighbour
+========check 4th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+J = 0; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+From (2, 2) to (2, 0) Try no bridge=======================
+========check 4th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+From (2, 2) to (2, 5) Try no bridge=======================
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+J = 2; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+From (2, 2) to (0, 2) Try no bridge=======================
+========check 4th node with its 3th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+J = 3; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+From (2, 2) to (4, 2) Try no bridge=======================
+========check 4th node with its 4th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 7, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+========check 5th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+J = 0; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+From (2, 5) to (2, 2) Try no bridge=======================
+========check 5th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+From (2, 5) to (0, 5) Try no bridge=======================
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+J = 2; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+From (2, 5) to (4, 5) Try no bridge=======================
+========check 5th node with its 3th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+========check 6th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+From (4, 0) to (4, 2) Try no bridge=======================
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+J = 1; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+From (4, 0) to (2, 0) Try no bridge=======================
+========check 6th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+========check 7th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+J = 0; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+From (4, 2) to (4, 0) Try no bridge=======================
+========check 7th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+From (4, 2) to (4, 5) Try no bridge=======================
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+J = 2; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+From (4, 2) to (2, 2) Try no bridge=======================
+========check 7th node with its 3th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+========check 8th node with its 0th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+J = 0; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+From (4, 5) to (4, 2) Try no bridge=======================
+========check 8th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+From (4, 5) to (2, 5) Try no bridge=======================
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+
+
+No bridge from (4, 5) to (2, 5) failed
+From (4, 5) to (2, 5) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+
+
+One bridge from (4, 5) to (2, 5) failed
+From (4, 5) to (2, 5) Try 2 bridge=======================
+Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+3 5
+(3, 5)
+[]
+Bridge from (4, 5) = 8 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 3, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': -2, 'is_hor': False}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....".
+7-7--8.
+#.|..#.
+6E7EE6.
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+
+
+Two bridge from (4, 5) to (2, 5) failed
+From (4, 5) to (2, 5) Try 3 bridge=======================
+Bridge exists. Skipped
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+From (4, 5) to (2, 5) Try no bridge=======================
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+
+
+No bridge from (4, 5) to (2, 5) failed
+From (4, 5) to (2, 5) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+
+
+One bridge from (4, 5) to (2, 5) failed
+From (4, 5) to (2, 5) Try 2 bridge=======================
+Bridge exists. Skipped
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+
+
+Two bridge from (4, 5) to (2, 5) failed
+From (4, 5) to (2, 5) Try 3 bridge=======================
+Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+3 5
+(3, 5)
+[]
+Bridge from (4, 5) = 8 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': -3, 'is_hor': False}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....#.
+7-7--8.
+#.|..#.
+6E7EE6.
+========check 8th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+
+
+No bridge from (4, 5) to (4, 2) failed
+From (4, 5) to (4, 2) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 8th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+
+
+One bridge from (4, 5) to (4, 2) failed
+From (4, 5) to (4, 2) Try 2 bridge=======================
+Trying to build bridge from (4, 5) = 8 to (4, 2) = 7
+Updating neighbours on the side of ends: [(4, 2), (4, 5)]
+(4, 3)
+[]
+(4, 4)
+[]
+Bridge from (4, 5) = 8 to (4, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+	{'xy': (4, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Bridge:
+	{'ends': [(4, 2), (4, 5)], 'val': -2, 'is_hor': True}
+============
+
+Removing
+	{'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+	from:
+[{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}]
+Removed
+	{'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [{'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 8}
+from
+	{'xy': (4, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+2.6--5.
+.....|.
+5.7..6.
+|....#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Node:
+	{'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8} has finished during iteration
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+
+
+No bridge from (4, 2) to (2, 2) failed
+From (4, 2) to (2, 2) Try 1 bridge=======================
+Trying to build bridge from (4, 2) = 7 to (2, 2) = 7
+Updating neighbours on the side of ends: [(2, 2), (4, 2)]
+3 2
+(3, 2)
+[]
+Bridge from (4, 2) = 7 to (2, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (2, 2), 'value': 7, 'capacity': 6, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+Bridge:
+	{'ends': [(2, 2), (4, 2)], 'val': -1, 'is_hor': False}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|.|..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+
+
+One bridge from (4, 2) to (2, 2) failed
+From (4, 2) to (2, 2) Try 2 bridge=======================
+Trying to build bridge from (4, 2) = 7 to (2, 2) = 7
+Updating neighbours on the side of ends: [(2, 2), (4, 2)]
+3 2
+(3, 2)
+[]
+Bridge from (4, 2) = 7 to (2, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (2, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+Bridge:
+	{'ends': [(2, 2), (4, 2)], 'val': -2, 'is_hor': False}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|."..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+
+
+Two bridge from (4, 2) to (2, 2) failed
+From (4, 2) to (2, 2) Try 3 bridge=======================
+Bridge exists. Skipped
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+From (4, 2) to (2, 2) Try no bridge=======================
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+
+
+No bridge from (4, 2) to (2, 2) failed
+From (4, 2) to (2, 2) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+
+
+One bridge from (4, 2) to (2, 2) failed
+From (4, 2) to (2, 2) Try 2 bridge=======================
+Bridge exists. Skipped
+========check 7th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+
+
+Two bridge from (4, 2) to (2, 2) failed
+From (4, 2) to (2, 2) Try 3 bridge=======================
+Trying to build bridge from (4, 2) = 7 to (2, 2) = 7
+Updating neighbours on the side of ends: [(2, 2), (4, 2)]
+3 2
+(3, 2)
+[]
+Bridge from (4, 2) = 7 to (2, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (2, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}, {'node': (4, 2), 'position': 7}], 'is_completed': False, 'position': 4}
+Bridge:
+	{'ends': [(2, 2), (4, 2)], 'val': -3, 'is_hor': False}
+============
+
+Removing
+	{'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 7}
+	from:
+[{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}]
+Removed
+	{'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 7}
+from
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+2.6--5.
+.....|.
+5.7..6.
+|.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7} has finished during iteration
+Node:
+	{'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7} has finished during iteration
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+
+
+No bridge from (4, 0) to (2, 0) failed
+From (4, 0) to (2, 0) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+
+
+One bridge from (4, 0) to (2, 0) failed
+From (4, 0) to (2, 0) Try 2 bridge=======================
+Trying to build bridge from (4, 0) = 7 to (2, 0) = 5
+Updating neighbours on the side of ends: [(2, 0), (4, 0)]
+3 0
+(3, 0)
+[]
+Bridge from (4, 0) = 7 to (2, 0) = 5 built
+Affected nodes:
+	{'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+	{'xy': (2, 0), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+Bridge:
+	{'ends': [(2, 0), (4, 0)], 'val': -2, 'is_hor': False}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+".#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+
+
+Two bridge from (4, 0) to (2, 0) failed
+From (4, 0) to (2, 0) Try 3 bridge=======================
+Bridge exists. Skipped
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+From (4, 0) to (2, 0) Try no bridge=======================
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+
+
+No bridge from (4, 0) to (2, 0) failed
+From (4, 0) to (2, 0) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+
+
+One bridge from (4, 0) to (2, 0) failed
+From (4, 0) to (2, 0) Try 2 bridge=======================
+Bridge exists. Skipped
+========check 6th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+
+
+Two bridge from (4, 0) to (2, 0) failed
+From (4, 0) to (2, 0) Try 3 bridge=======================
+Trying to build bridge from (4, 0) = 7 to (2, 0) = 5
+Updating neighbours on the side of ends: [(2, 0), (4, 0)]
+3 0
+(3, 0)
+[]
+Bridge from (4, 0) = 7 to (2, 0) = 5 built
+Affected nodes:
+	{'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+	{'xy': (2, 0), 'value': 5, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+Bridge:
+	{'ends': [(2, 0), (4, 0)], 'val': -3, 'is_hor': False}
+============
+
+Removing
+	{'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': False, 'position': 6}
+	from:
+2.6--5.
+.....|.
+5.7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Node:
+	{'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6} has finished during iteration
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+
+
+No bridge from (2, 5) to (0, 5) failed
+From (2, 5) to (0, 5) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+
+
+One bridge from (2, 5) to (0, 5) failed
+From (2, 5) to (0, 5) Try 2 bridge=======================
+Trying to build bridge from (2, 5) = 6 to (0, 5) = 5
+Updating neighbours on the side of ends: [(0, 5), (2, 5)]
+1 5
+(1, 5)
+[]
+Bridge from (2, 5) = 6 to (0, 5) = 5 built
+Affected nodes:
+	{'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+	{'xy': (0, 5), 'value': 5, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Bridge:
+	{'ends': [(0, 5), (2, 5)], 'val': -2, 'is_hor': False}
+============
+
+2.6--5.
+.....".
+5.7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+
+
+Two bridge from (2, 5) to (0, 5) failed
+From (2, 5) to (0, 5) Try 3 bridge=======================
+Bridge exists. Skipped
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+From (2, 5) to (0, 5) Try no bridge=======================
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+
+
+No bridge from (2, 5) to (0, 5) failed
+From (2, 5) to (0, 5) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+
+
+One bridge from (2, 5) to (0, 5) failed
+From (2, 5) to (0, 5) Try 2 bridge=======================
+Bridge exists. Skipped
+========check 5th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+
+
+Two bridge from (2, 5) to (0, 5) failed
+From (2, 5) to (0, 5) Try 3 bridge=======================
+Trying to build bridge from (2, 5) = 6 to (0, 5) = 5
+Updating neighbours on the side of ends: [(0, 5), (2, 5)]
+1 5
+(1, 5)
+[]
+Bridge from (2, 5) = 6 to (0, 5) = 5 built
+Affected nodes:
+	{'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 5}
+	{'xy': (0, 5), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Bridge:
+	{'ends': [(0, 5), (2, 5)], 'val': -3, 'is_hor': False}
+============
+
+Removing
+	{'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 5}
+	from:
+[{'node': (2, 0), 'position': 3}, {'node': (2, 5), 'position': 5}, {'node': (0, 2), 'position': 1}]
+Removed
+	{'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 5}
+from
+	{'xy': (2, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+2.6--5.
+.....#.
+5.7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5} has finished during iteration
+Node:
+	{'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5} has finished during iteration
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+
+
+No bridge from (2, 2) to (0, 2) failed
+From (2, 2) to (0, 2) Try 1 bridge=======================
+Trying to build bridge from (2, 2) = 7 to (0, 2) = 6
+Updating neighbours on the side of ends: [(0, 2), (2, 2)]
+1 2
+(1, 2)
+[]
+Bridge from (2, 2) = 7 to (0, 2) = 6 built
+Affected nodes:
+	{'xy': (2, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+	{'xy': (0, 2), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Bridge:
+	{'ends': [(0, 2), (2, 2)], 'val': -1, 'is_hor': False}
+============
+
+2.6--5.
+..|..#.
+5.7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+
+
+One bridge from (2, 2) to (0, 2) failed
+From (2, 2) to (0, 2) Try 2 bridge=======================
+Trying to build bridge from (2, 2) = 7 to (0, 2) = 6
+Updating neighbours on the side of ends: [(0, 2), (2, 2)]
+1 2
+(1, 2)
+[]
+Bridge from (2, 2) = 7 to (0, 2) = 6 built
+Affected nodes:
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+	{'xy': (0, 2), 'value': 6, 'capacity': 3, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Bridge:
+	{'ends': [(0, 2), (2, 2)], 'val': -2, 'is_hor': False}
+============
+
+2.6--5.
+.."..#.
+5.7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+
+
+Two bridge from (2, 2) to (0, 2) failed
+From (2, 2) to (0, 2) Try 3 bridge=======================
+Bridge exists. Skipped
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+From (2, 2) to (0, 2) Try no bridge=======================
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+
+
+No bridge from (2, 2) to (0, 2) failed
+From (2, 2) to (0, 2) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+
+
+One bridge from (2, 2) to (0, 2) failed
+From (2, 2) to (0, 2) Try 2 bridge=======================
+Bridge exists. Skipped
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 1; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+
+
+Two bridge from (2, 2) to (0, 2) failed
+From (2, 2) to (0, 2) Try 3 bridge=======================
+Trying to build bridge from (2, 2) = 7 to (0, 2) = 6
+Updating neighbours on the side of ends: [(0, 2), (2, 2)]
+1 2
+(1, 2)
+[]
+Bridge from (2, 2) = 7 to (0, 2) = 6 built
+Affected nodes:
+	{'xy': (2, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}, {'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 4}
+	{'xy': (0, 2), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Bridge:
+	{'ends': [(0, 2), (2, 2)], 'val': -3, 'is_hor': False}
+============
+
+2.6--5.
+..#..#.
+5.7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+========check 4th node with its 2th neighbour========
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 4}
+
+
+No bridge from (2, 2) to (2, 0) failed
+From (2, 2) to (2, 0) Try 1 bridge=======================
+Trying to build bridge from (2, 2) = 7 to (2, 0) = 5
+Updating neighbours on the side of ends: [(2, 0), (2, 2)]
+(2, 1)
+[]
+Bridge from (2, 2) = 7 to (2, 0) = 5 built
+Affected nodes:
+	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 4}
+	{'xy': (2, 0), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 3}
+Bridge:
+	{'ends': [(2, 0), (2, 2)], 'val': -1, 'is_hor': True}
+============
+
+Removing
+	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 4}
+	from:
+[{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}]
+Removed
+	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 4}
+from
+	{'xy': (2, 0), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 3}
+2.6--5.
+..#..#.
+5-7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4} has finished during iteration
+Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4} has finished during iteration
+Node:
+	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4} has finished during iteration
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 3}
+
+
+No bridge from (2, 0) to (0, 0) failed
+From (2, 0) to (0, 0) Try 1 bridge=======================
+Trying to build bridge from (2, 0) = 5 to (0, 0) = 2
+Updating neighbours on the side of ends: [(0, 0), (2, 0)]
+1 0
+(1, 0)
+[]
+Bridge from (2, 0) = 5 to (0, 0) = 2 built
+Affected nodes:
+	{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 3}
+	{'xy': (0, 0), 'value': 2, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 0}
+Bridge:
+	{'ends': [(0, 0), (2, 0)], 'val': -1, 'is_hor': False}
+============
+
+Removing
+	{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 3}
+	from:
+[{'node': (0, 2), 'position': 1}, {'node': (2, 0), 'position': 3}]
+Removed
+	{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 3}
+from
+	{'xy': (0, 0), 'value': 2, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 0}
+2.6--5.
+|.#..#.
+5-7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3} has finished during iteration
+Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3} has finished during iteration
+Node:
+	{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3} has finished during iteration
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (0, 5), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 2}
+
+
+No bridge from (0, 5) to (0, 2) failed
+From (0, 5) to (0, 2) Try 1 bridge=======================
+Bridge exists. Skipped
+========check 2th node with its 1th neighbour========
+Start DFS,
+	Node: {'xy': (0, 5), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 2}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (0, 5), 'value': 5, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 2}
+
+
+One bridge from (0, 5) to (0, 2) failed
+From (0, 5) to (0, 2) Try 2 bridge=======================
+Trying to build bridge from (0, 5) = 5 to (0, 2) = 6
+Updating neighbours on the side of ends: [(0, 2), (0, 5)]
+(0, 3)
+[]
+(0, 4)
+[]
+Bridge from (0, 5) = 5 to (0, 2) = 6 built
+Affected nodes:
+	{'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 2}
+	{'xy': (0, 2), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 1}
+Bridge:
+	{'ends': [(0, 2), (0, 5)], 'val': -2, 'is_hor': True}
+============
+
+Removing
+	{'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 2}
+	from:
+[{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}]
+Removed
+	{'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 2}
+from
+	{'xy': (0, 2), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 1}
+2.6==5.
+|.#..#.
+5-7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+Node:
+	{'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 2} has finished during iteration
+Node:
+	{'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 2} has finished during iteration
+Start DFS,
+	Node: {'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 2}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+Exceeded node's neighbour
+Start DFS,
+	Node: {'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+Exceeded node's neighbour
+
+==============In solve, checking at 12th node and 0th neighbour================
+	Not all completed
+
+J = 0; Node:
+	{'xy': (0, 2), 'value': 6, 'capacity': 1, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 1}
+
+
+No bridge from (0, 2) to (0, 0) failed
+From (0, 2) to (0, 0) Try 1 bridge=======================
+Trying to build bridge from (0, 2) = 6 to (0, 0) = 2
+Updating neighbours on the side of ends: [(0, 0), (0, 2)]
+(0, 1)
+[]
+Bridge from (0, 2) = 6 to (0, 0) = 2 built
+Affected nodes:
+	{'xy': (0, 2), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 1}
+	{'xy': (0, 0), 'value': 2, 'capacity': 0, 'neighbours': [{'node': (0, 2), 'position': 1}], 'is_completed': False, 'position': 0}
+Bridge:
+	{'ends': [(0, 0), (0, 2)], 'val': -1, 'is_hor': True}
+============
+
+Removing
+	{'xy': (0, 2), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 1}
+	from:
+[{'node': (0, 2), 'position': 1}]
+Removed
+	{'xy': (0, 2), 'value': 6, 'capacity': 0, 'neighbours': [{'node': (0, 0), 'position': 0}], 'is_completed': False, 'position': 1}
+from
+	{'xy': (0, 0), 'value': 2, 'capacity': 0, 'neighbours': [], 'is_completed': False, 'position': 0}
+Removing
+	{'xy': (0, 0), 'value': 2, 'capacity': 0, 'neighbours': [], 'is_completed': False, 'position': 0}
+	from:
+2-6==5.
+|.#..#.
+5-7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+SUCCESS
+2-6==5.
+|.#..#.
+5-7..6.
+#.#..#.
+7-7==8.
+#.|..#.
+6E7EE6.
+
+{'xy': (0, 0), 'value': 2, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 0}
+{'xy': (0, 2), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 1}
+{'xy': (0, 5), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 2}
+{'xy': (2, 0), 'value': 5, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 3}
+{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4}
+{'xy': (2, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 5}
+{'xy': (4, 0), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 6}
+{'xy': (4, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 7}
+{'xy': (4, 5), 'value': 8, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 8}
+{'xy': (6, 0), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 9}
+{'xy': (6, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 10}
+{'xy': (6, 5), 'value': 6, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 11}
+{'ends': [(0, 2), (0, 5)], 'val': -2, 'is_hor': True}
+{'ends': [(0, 5), (2, 5)], 'val': -3, 'is_hor': False}
 {'ends': [(4, 0), (4, 2)], 'val': -1, 'is_hor': True}
-{'ends': [(2, 0), (4, 0)], 'val': -1, 'is_hor': False}
-{'ends': [(4, 0), (6, 0)], 'val': -2, 'is_hor': False}
-{'ends': [(4, 2), (4, 5)], 'val': -1, 'is_hor': True}
-{'ends': [(2, 5), (4, 5)], 'val': -1, 'is_hor': False}
-{'ends': [(4, 5), (6, 5)], 'val': -2, 'is_hor': False}
-{'ends': [(6, 0), (6, 2)], 'val': -1, 'is_hor': True}
-{'ends': [(6, 2), (6, 5)], 'val': -1, 'is_hor': True}
+{'ends': [(2, 0), (4, 0)], 'val': -3, 'is_hor': False}
+{'ends': [(4, 0), (6, 0)], 'val': -3, 'is_hor': False}
+{'ends': [(4, 2), (4, 5)], 'val': -2, 'is_hor': True}
+{'ends': [(2, 5), (4, 5)], 'val': -3, 'is_hor': False}
+{'ends': [(4, 5), (6, 5)], 'val': -3, 'is_hor': False}
+{'ends': [(6, 0), (6, 2)], 'val': -3, 'is_hor': True}
+{'ends': [(6, 2), (6, 5)], 'val': -3, 'is_hor': True}
+{'ends': [(4, 2), (6, 2)], 'val': -1, 'is_hor': False}
+{'ends': [(2, 2), (4, 2)], 'val': -3, 'is_hor': False}
+{'ends': [(0, 2), (2, 2)], 'val': -3, 'is_hor': False}
+{'ends': [(2, 0), (2, 2)], 'val': -1, 'is_hor': True}
+{'ends': [(0, 0), (2, 0)], 'val': -1, 'is_hor': False}
+{'ends': [(0, 0), (0, 2)], 'val': -1, 'is_hor': True}
