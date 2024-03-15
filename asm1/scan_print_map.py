@@ -434,6 +434,7 @@ def main():
     #     print(node)
     # For all nodes, try apply the lemma to link islands that must be connected before applying other search strategies
     init_complete = False
+    print("Start checking lemma")
     while (not init_complete):
         init_complete = True
         ccc+=1
@@ -461,8 +462,9 @@ def main():
                     for neighbour in neighbours:
                         build_bridge(node['xy'], neighbour['node'], idx, i_map, -1, nrow, ncol, nodes, bridges)
                 # Post-Lemma Pre-DFS map result
-    # print_map(nrow, ncol, i_map)
-    # print()
+    print("finished checking lemma")
+    print_map(nrow, ncol, i_map)
+    print()
             # else:
                 # print("Lemma unsatisfied\n")
     

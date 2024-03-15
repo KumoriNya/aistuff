@@ -1,9 +1,53 @@
 #!/usr/bin/python3
 #************************************************************
-#   scan_print_map.py
-#   Scan a hashi puzzle from stdin, store it in a numpy array,
-#   and print it out again.
+#   hashi.py
+#   Once the map is scanned, store all the islands in an array of dictionay,
+#   The Island dictionary contains information about the islands':
+#       1. coordinate(x,y); 
+#       2. value of the island; 
+#       3. capacity(value - # all connected bridges)
+#       4. position (island's position in the array); 
+#       5. neighbours: a list of {'neighbour_node_xy', 'position_in_array'}
+#       6. is_completed: a boolean value indicating if an island is exhausted and satisfies constraints. 
 #
+#   Bridges are also stored in an array to keep track of the direction on the map,
+#   which contains: 1. the coordinates of both ends of the bridge; 
+#                   2. number of parallel bridges; 3. direction of the bridge (flat/vertical)
+#   
+#   Procedures:
+#   Pre-Iterative Search processing: 
+#       Given the constraints, we can deduce that 
+#           1.  all islands with only 1 available neighbour island 
+#               must connect with their neighbours with all their capacity;
+#           2.  islands with capacity > (#neighbours - 1) * MaxBridgeNum(3) 
+#               must connect with all their neighbours;
+#           hence> 2.1. an island with capacity 6 with 2 neighbours must connect both with 3 bridges; 
+#                       an island with capacity 9 with 3 neighbours must connect both with 3 bridges; 
+#                       an island with capacity a / 12 with 4 neighbours must connect both with 3 bridges; 
+#   The step about guarantees that all bridges built are necessary according to the constraints.
+#
+#   Algorithm: 
+#       Idea: For all remaining unfinished nodes, try build 0 ~ 3 bridges with available neighbours
+#   Pseudo-Code:
+#     search():
+#       An iterative DFS search. 
+#       Base Case: if all neighbours of the current island have been searched, go to next island
+#       Main Explore Loop: 
+#           for i in [0, 1, 2, 3]: 
+#               try build [No, 1, 2, 3] bridge(s) from the island to the current neighbour
+#               calls search()  with the updated bridges info, nodes info,
+#                               and increment the index for neighbour 
+#                               such that it searches the next neighbour / island available 
+#       Final Check:    if we hit this, we are at the end of a DFS tree / the top of the stack 
+#                       thus we check if all nodes are finished(i.e. all their capacities are exhausted)
+#                       if this is not satisfied, return False, and the (top - 1) stack continues to try 
+#                       build a different amount of bridges until a valid map is built
+#   Validation of the algo: Given we have at most 800 bridges to be built, 
+#                           there is a maximum amount of 4 ^ 800 iterative checks to be done which is too large.
+#                           Therefore a pre-iterative search processing is applied, but this still may leave a
+#                           large amount of possibilities to be searched.
+#                           To reduce the amount of iterative checks to be made, I've considered (but yet to implement)
+#                           applying the Pre-Iterative search processing every time a new bridge is built.
 import numpy as np
 import sys
 nrow = 0
@@ -285,11 +329,13 @@ def print_bridge(x, y):
                 code_bridge(False, -bridge['val'])
 
 def print_map(nrow, ncol, i_map):
+    print("=====================")
     for r in range(nrow):
         for c in range(ncol):
             if (i_map[r,c] >= 0): print(code[i_map[r,c]],end="")
             else: print_bridge(r,c)
         print()
+    print("=====================")
 
 def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
     # # Content from last iteration
@@ -339,8 +385,8 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
                         return True
                     return False
                 elif (len(node['neighbours']) == 0 and node['capacity'] > 0):
-                    # print(f"Current upcoming allocation does not work due to\nNode:\n\t{node}")
-                    # print_map(nrow, ncol, i_map)
+                    print(f"Current upcoming allocation does not work due to\nNode:\n\t{node}")
+                    print_map(nrow, ncol, i_map)
                     return False
                 while (j >= len(neighbours)):
                     j -= 1
@@ -359,7 +405,8 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
                     # Only build one bridge if no bridge has been built
                     if bridge_idx == -1:
                         build_bridge(node['xy'], neighbour['node'], find_node(node['xy'], nodes), i_map, -1, nrow, ncol, nodes, bridges)
-                        if (is_test): print_map(nrow, ncol, i_map)
+                        # if (is_test): 
+                        print_map(nrow, ncol, i_map)
                     else:
                         if (is_test): print("Bridge exists. Skipped")
                     if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
@@ -371,7 +418,8 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
                     bridge_val = bridges[bridge_idx]['val']
                     if bridge_val == -1:
                         build_bridge(node['xy'], neighbour['node'], find_node(node['xy'], nodes), i_map, -1, nrow, ncol, nodes, bridges)
-                        if (is_test): print_map(nrow, ncol, i_map)
+                        # if (is_test): 
+                        print_map(nrow, ncol, i_map)
                     # else: print("Bridge exists. Skipped")
                     if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
                         return True
@@ -381,7 +429,8 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
                     # Only build the thrid bridge if there is currently exactly two bridges
                     if bridge_val == -2:
                         build_bridge(node['xy'], neighbour['node'], find_node(node['xy'], nodes), i_map, -1, nrow, ncol, nodes, bridges)
-                        if (is_test): print_map(nrow, ncol, i_map)
+                        # if (is_test): 
+                        print_map(nrow, ncol, i_map)
                     else:
                         if (is_test): print("Bridge exists. Skipped")
                     if solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j + 1, is_test):
@@ -434,6 +483,7 @@ def main():
     #     print(node)
     # For all nodes, try apply the lemma to link islands that must be connected before applying other search strategies
     init_complete = False
+    print("Start checking lemma")
     while (not init_complete):
         init_complete = True
         ccc+=1
@@ -461,8 +511,9 @@ def main():
                     for neighbour in neighbours:
                         build_bridge(node['xy'], neighbour['node'], idx, i_map, -1, nrow, ncol, nodes, bridges)
                 # Post-Lemma Pre-DFS map result
-    # print_map(nrow, ncol, i_map)
-    # print()
+    print("finished checking lemma")
+    print_map(nrow, ncol, i_map)
+    print()
             # else:
                 # print("Lemma unsatisfied\n")
     
@@ -485,7 +536,7 @@ def main():
         'iter'  : 0,
     })
     # print(f"dfs nodes: {dfs_nodes}\ndfs bridges: {dfs_bridges}")
-    sys.setrecursionlimit(100)
+    sys.setrecursionlimit(10000)
     tuning = False
     solve(i_map, nodes, bridges, nrow, ncol, 0, 0, tuning)
     print_map(nrow, ncol, i_map)
