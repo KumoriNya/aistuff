@@ -485,6 +485,50 @@ Enter #4 recursive at node index [1] at its [1] th neighbour
 Recursively checking #4 at node index [1] at its [1] th neighbour
 	Node: {'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Failed Trying to 0 build(s) at #4 stack since 0 < 11.
+Trying to build bridge from (0, 2) = 6 to (0, 5) = 5
+Updating neighbours on the side of ends: [(0, 2), (0, 5)]
+======
+Adding neighbours back for
+	{'xy': (0, 2), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+and
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+======
+Bridge(0) from (0, 2) = 6 to (0, 5) = 5 built
+Affected nodes:
+	{'xy': (0, 2), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Bridge:
+	{'ends': [(0, 2), (0, 5)], 'val': 0, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6..5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (0, 2) = 6 to (0, 5) = 5
+Updating neighbours on the side of ends: [(0, 2), (0, 5)]
+Bridge(-1) from (0, 2) = 6 to (0, 5) = 5 built
+Affected nodes:
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Bridge:
+	{'ends': [(0, 2), (0, 5)], 'val': -1, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #5 recursive at node index [1] at its [0] th neighbour
 2.6--5.
 .....|.
@@ -541,6 +585,50 @@ Enter #7 recursive at node index [2] at its [-2] th neighbour
 Recursively checking #7 at node index [2] at its [1] th neighbour
 	Node: {'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
 Failed Trying to 0 build(s) at #7 stack since 1 < 11.
+Trying to build bridge from (0, 5) = 5 to (2, 5) = 6
+Updating neighbours on the side of ends: [(0, 5), (2, 5)]
+======
+Adding neighbours back for
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+and
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+======
+Bridge(0) from (0, 5) = 5 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(0, 5), (2, 5)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.......
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (0, 5) = 5 to (2, 5) = 6
+Updating neighbours on the side of ends: [(0, 5), (2, 5)]
+Bridge(-1) from (0, 5) = 5 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(0, 5), (2, 5)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #8 recursive at node index [2] at its [0] th neighbour
 2.6--5.
 .....|.
@@ -552,6 +640,50 @@ Enter #8 recursive at node index [2] at its [0] th neighbour
 Recursively checking #8 at node index [2] at its [0] th neighbour
 	Node: {'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
 Failed Trying to 0 build(s) at #8 stack since 0 < 11.
+Trying to build bridge from (0, 5) = 5 to (0, 2) = 6
+Updating neighbours on the side of ends: [(0, 2), (0, 5)]
+======
+Adding neighbours back for
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+and
+	{'xy': (0, 2), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+======
+Bridge(0) from (0, 5) = 5 to (0, 2) = 6 built
+Affected nodes:
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (0, 2), 'value': 6, 'capacity': 6, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Bridge:
+	{'ends': [(0, 2), (0, 5)], 'val': 0, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6..5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (0, 5) = 5 to (0, 2) = 6
+Updating neighbours on the side of ends: [(0, 2), (0, 5)]
+Bridge(-1) from (0, 5) = 5 to (0, 2) = 6 built
+Affected nodes:
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
+Bridge:
+	{'ends': [(0, 2), (0, 5)], 'val': -1, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #9 recursive at node index [2] at its [-1] th neighbour
 2.6--5.
 .....|.
@@ -571,6 +703,50 @@ Enter #10 recursive at node index [3] at its [-2] th neighbour
 Recursively checking #10 at node index [3] at its [2] th neighbour
 	Node: {'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
 Failed Trying to 0 build(s) at #10 stack since 3 < 11.
+Trying to build bridge from (2, 0) = 5 to (4, 0) = 7
+Updating neighbours on the side of ends: [(2, 0), (4, 0)]
+======
+Adding neighbours back for
+	{'xy': (2, 0), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+and
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+======
+Bridge(0) from (2, 0) = 5 to (4, 0) = 7 built
+Affected nodes:
+	{'xy': (2, 0), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Bridge:
+	{'ends': [(2, 0), (4, 0)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+.....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (2, 0) = 5 to (4, 0) = 7
+Updating neighbours on the side of ends: [(2, 0), (4, 0)]
+Bridge(-1) from (2, 0) = 5 to (4, 0) = 7 built
+Affected nodes:
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Bridge:
+	{'ends': [(2, 0), (4, 0)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #11 recursive at node index [3] at its [1] th neighbour
 2.6--5.
 .....|.
@@ -820,6 +996,50 @@ Enter #19 recursive at node index [5] at its [-2] th neighbour
 Recursively checking #19 at node index [5] at its [2] th neighbour
 	Node: {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
 Failed Trying to 0 build(s) at #19 stack since 6 < 11.
+Trying to build bridge from (2, 5) = 6 to (4, 5) = 8
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+======
+Adding neighbours back for
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+and
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+======
+Bridge(0) from (2, 5) = 6 to (4, 5) = 8 built
+Affected nodes:
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|......
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (2, 5) = 6 to (4, 5) = 8
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+Bridge(-1) from (2, 5) = 6 to (4, 5) = 8 built
+Affected nodes:
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #20 recursive at node index [5] at its [1] th neighbour
 2.6--5.
 .....|.
@@ -831,6 +1051,50 @@ Enter #20 recursive at node index [5] at its [1] th neighbour
 Recursively checking #20 at node index [5] at its [1] th neighbour
 	Node: {'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
 Failed Trying to 0 build(s) at #20 stack since 1 < 11.
+Trying to build bridge from (2, 5) = 6 to (0, 5) = 5
+Updating neighbours on the side of ends: [(0, 5), (2, 5)]
+======
+Adding neighbours back for
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+and
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+======
+Bridge(0) from (2, 5) = 6 to (0, 5) = 5 built
+Affected nodes:
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (0, 5), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Bridge:
+	{'ends': [(0, 5), (2, 5)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.......
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (2, 5) = 6 to (0, 5) = 5
+Updating neighbours on the side of ends: [(0, 5), (2, 5)]
+Bridge(-1) from (2, 5) = 6 to (0, 5) = 5 built
+Affected nodes:
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+	{'xy': (0, 5), 'value': 5, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 2}
+Bridge:
+	{'ends': [(0, 5), (2, 5)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #21 recursive at node index [5] at its [0] th neighbour
 2.6--5.
 .....|.
@@ -887,6 +1151,50 @@ Enter #23 recursive at node index [6] at its [-2] th neighbour
 Recursively checking #23 at node index [6] at its [1] th neighbour
 	Node: {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
 Failed Trying to 0 build(s) at #23 stack since 3 < 11.
+Trying to build bridge from (4, 0) = 7 to (2, 0) = 5
+Updating neighbours on the side of ends: [(2, 0), (4, 0)]
+======
+Adding neighbours back for
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+and
+	{'xy': (2, 0), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+======
+Bridge(0) from (4, 0) = 7 to (2, 0) = 5 built
+Affected nodes:
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+	{'xy': (2, 0), 'value': 5, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+Bridge:
+	{'ends': [(2, 0), (4, 0)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+.....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 0) = 7 to (2, 0) = 5
+Updating neighbours on the side of ends: [(2, 0), (4, 0)]
+Bridge(-1) from (4, 0) = 7 to (2, 0) = 5 built
+Affected nodes:
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+	{'xy': (2, 0), 'value': 5, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 0), 'position': 0}, {'node': (4, 0), 'position': 6}], 'is_completed': False, 'position': 3}
+Bridge:
+	{'ends': [(2, 0), (4, 0)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #24 recursive at node index [6] at its [0] th neighbour
 2.6--5.
 .....|.
@@ -898,6 +1206,50 @@ Enter #24 recursive at node index [6] at its [0] th neighbour
 Recursively checking #24 at node index [6] at its [0] th neighbour
 	Node: {'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
 Failed Trying to 0 build(s) at #24 stack since 2 < 11.
+Trying to build bridge from (4, 0) = 7 to (4, 2) = 7
+Updating neighbours on the side of ends: [(4, 0), (4, 2)]
+======
+Adding neighbours back for
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+and
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+======
+Bridge(0) from (4, 0) = 7 to (4, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Bridge:
+	{'ends': [(4, 0), (4, 2)], 'val': 0, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7.7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 0) = 7 to (4, 2) = 7
+Updating neighbours on the side of ends: [(4, 0), (4, 2)]
+Bridge(-1) from (4, 0) = 7 to (4, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Bridge:
+	{'ends': [(4, 0), (4, 2)], 'val': -1, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #25 recursive at node index [6] at its [-1] th neighbour
 2.6--5.
 .....|.
@@ -954,6 +1306,50 @@ Enter #27 recursive at node index [7] at its [1] th neighbour
 Recursively checking #27 at node index [7] at its [1] th neighbour
 	Node: {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
 Failed Trying to 0 build(s) at #27 stack since 5 < 11.
+Trying to build bridge from (4, 2) = 7 to (4, 5) = 8
+Updating neighbours on the side of ends: [(4, 2), (4, 5)]
+======
+Adding neighbours back for
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+and
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+======
+Bridge(0) from (4, 2) = 7 to (4, 5) = 8 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Bridge:
+	{'ends': [(4, 2), (4, 5)], 'val': 0, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7..8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 2) = 7 to (4, 5) = 8
+Updating neighbours on the side of ends: [(4, 2), (4, 5)]
+Bridge(-1) from (4, 2) = 7 to (4, 5) = 8 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+Bridge:
+	{'ends': [(4, 2), (4, 5)], 'val': -1, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #28 recursive at node index [7] at its [0] th neighbour
 2.6--5.
 .....|.
@@ -965,6 +1361,50 @@ Enter #28 recursive at node index [7] at its [0] th neighbour
 Recursively checking #28 at node index [7] at its [0] th neighbour
 	Node: {'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
 Failed Trying to 0 build(s) at #28 stack since 2 < 11.
+Trying to build bridge from (4, 2) = 7 to (4, 0) = 7
+Updating neighbours on the side of ends: [(4, 0), (4, 2)]
+======
+Adding neighbours back for
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+and
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+======
+Bridge(0) from (4, 2) = 7 to (4, 0) = 7 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 0), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Bridge:
+	{'ends': [(4, 0), (4, 2)], 'val': 0, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7.7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 2) = 7 to (4, 0) = 7
+Updating neighbours on the side of ends: [(4, 0), (4, 2)]
+Bridge(-1) from (4, 2) = 7 to (4, 0) = 7 built
+Affected nodes:
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+	{'xy': (4, 0), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 0), 'position': 3}], 'is_completed': False, 'position': 6}
+Bridge:
+	{'ends': [(4, 0), (4, 2)], 'val': -1, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #29 recursive at node index [7] at its [-1] th neighbour
 2.6--5.
 .....|.
@@ -984,6 +1424,50 @@ Enter #30 recursive at node index [8] at its [-2] th neighbour
 Recursively checking #30 at node index [8] at its [1] th neighbour
 	Node: {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
 Failed Trying to 0 build(s) at #30 stack since 6 < 11.
+Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+======
+Adding neighbours back for
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+and
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+======
+Bridge(0) from (4, 5) = 8 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|......
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+Bridge(-1) from (4, 5) = 8 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #31 recursive at node index [8] at its [0] th neighbour
 2.6--5.
 .....|.
@@ -995,6 +1479,50 @@ Enter #31 recursive at node index [8] at its [0] th neighbour
 Recursively checking #31 at node index [8] at its [0] th neighbour
 	Node: {'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
 Failed Trying to 0 build(s) at #31 stack since 5 < 11.
+Trying to build bridge from (4, 5) = 8 to (4, 2) = 7
+Updating neighbours on the side of ends: [(4, 2), (4, 5)]
+======
+Adding neighbours back for
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+and
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+======
+Bridge(0) from (4, 5) = 8 to (4, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 4, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (4, 2), 'value': 7, 'capacity': 5, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Bridge:
+	{'ends': [(4, 2), (4, 5)], 'val': 0, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7..8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 5) = 8 to (4, 2) = 7
+Updating neighbours on the side of ends: [(4, 2), (4, 5)]
+Bridge(-1) from (4, 5) = 8 to (4, 2) = 7 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 3, 'neighbours': [{'node': (4, 2), 'position': 7}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (4, 2), 'value': 7, 'capacity': 4, 'neighbours': [{'node': (4, 0), 'position': 6}, {'node': (4, 5), 'position': 8}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 7}
+Bridge:
+	{'ends': [(4, 2), (4, 5)], 'val': -1, 'is_hor': True, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7--8.
+#.|..#.
+6E7EE6.
+
+
 Enter #32 recursive at node index [8] at its [-1] th neighbour
 2.6--5.
 .....|.
@@ -1288,6 +1816,50 @@ Enter #31 recursive at node index [8] at its [0] th neighbour
 Recursively checking #31 at node index [8] at its [0] th neighbour
 	Node: {'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
 Failed Trying to 0 build(s) at #31 stack since 6 < 11.
+Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+======
+Adding neighbours back for
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+and
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+======
+Bridge(0) from (4, 5) = 8 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 2, 'neighbours': [{'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': 0, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|......
+7-7EE8.
+#.|..#.
+6E7EE6.
+
+
+Trying to build bridge from (4, 5) = 8 to (2, 5) = 6
+Updating neighbours on the side of ends: [(2, 5), (4, 5)]
+Bridge(-1) from (4, 5) = 8 to (2, 5) = 6 built
+Affected nodes:
+	{'xy': (4, 5), 'value': 8, 'capacity': 1, 'neighbours': [{'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 8}
+	{'xy': (2, 5), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (2, 2), 'position': 4}, {'node': (0, 5), 'position': 2}, {'node': (4, 5), 'position': 8}], 'is_completed': False, 'position': 5}
+Bridge:
+	{'ends': [(2, 5), (4, 5)], 'val': -1, 'is_hor': False, 'lemma_val': -1}
+============
+
+2.6--5.
+.....|.
+5.7..6.
+|....|.
+7-7EE8.
+#.|..#.
+6E7EE6.
+
+
 Enter #32 recursive at node index [8] at its [-1] th neighbour
 2.6--5.
 .....|.
@@ -3683,7 +4255,7 @@ and
 ======
 Bridge(0) from (2, 2) = 7 to (0, 2) = 6 built
 Affected nodes:
-	{'xy': (2, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 4}
+	{'xy': (2, 2), 'value': 7, 'capacity': 3, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 4}
 	{'xy': (0, 2), 'value': 6, 'capacity': 5, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Bridge:
 	{'ends': [(0, 2), (2, 2)], 'val': 0, 'is_hor': False, 'lemma_val': 0}
@@ -4018,7 +4590,7 @@ Trying to build bridge from (2, 2) = 7 to (0, 2) = 6
 Updating neighbours on the side of ends: [(0, 2), (2, 2)]
 Bridge(-1) from (2, 2) = 7 to (0, 2) = 6 built
 Affected nodes:
-	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 4}
+	{'xy': (2, 2), 'value': 7, 'capacity': 2, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 4}
 	{'xy': (0, 2), 'value': 6, 'capacity': 4, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Bridge:
 	{'ends': [(0, 2), (2, 2)], 'val': -1, 'is_hor': False, 'lemma_val': 0}
@@ -4353,7 +4925,7 @@ Trying to build bridge from (2, 2) = 7 to (0, 2) = 6
 Updating neighbours on the side of ends: [(0, 2), (2, 2)]
 Bridge(-2) from (2, 2) = 7 to (0, 2) = 6 built
 Affected nodes:
-	{'xy': (2, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 4}
+	{'xy': (2, 2), 'value': 7, 'capacity': 1, 'neighbours': [{'node': (0, 2), 'position': 1}, {'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 4}
 	{'xy': (0, 2), 'value': 6, 'capacity': 3, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}, {'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 1}
 Bridge:
 	{'ends': [(0, 2), (2, 2)], 'val': -2, 'is_hor': False, 'lemma_val': 0}
@@ -4687,7 +5259,7 @@ Trying to -3 build(s) at #17 stack from (2, 2) to (0, 2).
 Trying to build bridge from (2, 2) = 7 to (0, 2) = 6
 Updating neighbours on the side of ends: [(0, 2), (2, 2)]
 Removed {'node': (2, 2), 'position': 4} from {'xy': (0, 2), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (0, 0), 'position': 0}, {'node': (0, 5), 'position': 2}], 'is_completed': False, 'position': 1}
-Removed {'node': (0, 2), 'position': 1} from {'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': False, 'position': 4}
+Removed {'node': (0, 2), 'position': 1} from {'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [{'node': (2, 5), 'position': 5}], 'is_completed': False, 'position': 4}
 Bridge(-3) from (2, 2) = 7 to (0, 2) = 6 built
 Affected nodes:
 	{'xy': (2, 2), 'value': 7, 'capacity': 0, 'neighbours': [], 'is_completed': True, 'position': 4}
@@ -4722,10 +5294,7 @@ Enter #19 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #19 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #19 stack since cur node is completed
-Enter #20 recursive at node index [5] at its [-1] th neighbour
+Enter #20 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4733,7 +5302,7 @@ Enter #20 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #21 recursive at node index [6] at its [-2] th neighbour
+Enter #21 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4741,15 +5310,7 @@ Enter #21 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #22 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [8] at its [-2] th neighbour
+Enter #22 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4758,7 +5319,7 @@ Enter #23 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #24 recursive at node index [9] at its [-2] th neighbour
+Enter #23 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4766,7 +5327,7 @@ Enter #24 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #25 recursive at node index [10] at its [-2] th neighbour
+Enter #24 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4774,7 +5335,7 @@ Enter #25 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #26 recursive at node index [11] at its [-2] th neighbour
+Enter #25 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4782,7 +5343,7 @@ Enter #26 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #27 recursive at node index [12] at its [-2] th neighbour
+Enter #26 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -4790,229 +5351,7 @@ Enter #27 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-27 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #19 stack since cur node is completed
-Enter #20 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #24 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #27 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-27 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #19 stack since cur node is completed
-Enter #20 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #24 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #27 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-27 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #19 stack since cur node is completed
-Enter #20 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #24 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #27 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-27 Traversed all nodes and not succeeded. Current Status:
+26 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5037,10 +5376,7 @@ Enter #18 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #18 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
+Enter #19 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5048,7 +5384,7 @@ Enter #19 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
+Enter #20 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5056,15 +5392,7 @@ Enter #20 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
+Enter #21 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5073,7 +5401,7 @@ Enter #22 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
+Enter #22 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5081,7 +5409,7 @@ Enter #23 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
+Enter #23 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5089,7 +5417,7 @@ Enter #24 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
+Enter #24 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5097,7 +5425,7 @@ Enter #25 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
+Enter #25 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5105,229 +5433,7 @@ Enter #26 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
+25 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5352,10 +5458,7 @@ Enter #18 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #18 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
+Enter #19 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5363,7 +5466,7 @@ Enter #19 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
+Enter #20 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5371,15 +5474,7 @@ Enter #20 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
+Enter #21 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5388,7 +5483,7 @@ Enter #22 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
+Enter #22 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5396,7 +5491,7 @@ Enter #23 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
+Enter #23 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5404,7 +5499,7 @@ Enter #24 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
+Enter #24 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5412,7 +5507,7 @@ Enter #25 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
+Enter #25 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5420,229 +5515,7 @@ Enter #26 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #18 stack since cur node is completed
-Enter #19 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #23 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #26 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-26 Traversed all nodes and not succeeded. Current Status:
+25 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5667,10 +5540,7 @@ Enter #17 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #17 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
+Enter #18 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5678,7 +5548,7 @@ Enter #18 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
+Enter #19 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5686,15 +5556,7 @@ Enter #19 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
+Enter #20 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5703,7 +5565,7 @@ Enter #21 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
+Enter #21 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5711,7 +5573,7 @@ Enter #22 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
+Enter #22 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5719,7 +5581,7 @@ Enter #23 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
+Enter #23 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5727,7 +5589,7 @@ Enter #24 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
+Enter #24 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5735,229 +5597,7 @@ Enter #25 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
+24 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5982,10 +5622,7 @@ Enter #17 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #17 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
+Enter #18 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -5993,7 +5630,7 @@ Enter #18 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
+Enter #19 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6001,15 +5638,7 @@ Enter #19 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
+Enter #20 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6018,7 +5647,7 @@ Enter #21 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
+Enter #21 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6026,7 +5655,7 @@ Enter #22 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
+Enter #22 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6034,7 +5663,7 @@ Enter #23 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
+Enter #23 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6042,7 +5671,7 @@ Enter #24 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
+Enter #24 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6050,229 +5679,7 @@ Enter #25 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
+24 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6297,10 +5704,7 @@ Enter #17 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #17 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
+Enter #18 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6308,7 +5712,7 @@ Enter #18 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
+Enter #19 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6316,15 +5720,7 @@ Enter #19 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
+Enter #20 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6333,7 +5729,7 @@ Enter #21 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
+Enter #21 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6341,7 +5737,7 @@ Enter #22 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
+Enter #22 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6349,7 +5745,7 @@ Enter #23 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
+Enter #23 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6357,7 +5753,7 @@ Enter #24 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
+Enter #24 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6365,229 +5761,7 @@ Enter #25 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #17 stack since cur node is completed
-Enter #18 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #22 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #25 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-25 Traversed all nodes and not succeeded. Current Status:
+24 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6612,10 +5786,7 @@ Enter #16 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #16 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
+Enter #17 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6623,7 +5794,7 @@ Enter #17 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
+Enter #18 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6631,15 +5802,7 @@ Enter #18 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
+Enter #19 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6648,7 +5811,7 @@ Enter #20 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
+Enter #20 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6656,7 +5819,7 @@ Enter #21 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
+Enter #21 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6664,7 +5827,7 @@ Enter #22 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
+Enter #22 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6672,7 +5835,7 @@ Enter #23 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
+Enter #23 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6680,229 +5843,7 @@ Enter #24 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
+23 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6927,10 +5868,7 @@ Enter #16 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #16 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
+Enter #17 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6938,7 +5876,7 @@ Enter #17 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
+Enter #18 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6946,15 +5884,7 @@ Enter #18 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
+Enter #19 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6963,7 +5893,7 @@ Enter #20 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
+Enter #20 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6971,7 +5901,7 @@ Enter #21 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
+Enter #21 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6979,7 +5909,7 @@ Enter #22 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
+Enter #22 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6987,7 +5917,7 @@ Enter #23 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
+Enter #23 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -6995,229 +5925,7 @@ Enter #24 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
+23 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7242,10 +5950,7 @@ Enter #16 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #16 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
+Enter #17 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7253,7 +5958,7 @@ Enter #17 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
+Enter #18 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7261,15 +5966,7 @@ Enter #18 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
+Enter #19 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7278,7 +5975,7 @@ Enter #20 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
+Enter #20 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7286,7 +5983,7 @@ Enter #21 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
+Enter #21 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7294,7 +5991,7 @@ Enter #22 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
+Enter #22 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7302,7 +5999,7 @@ Enter #23 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
+Enter #23 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7310,229 +6007,7 @@ Enter #24 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #16 stack since cur node is completed
-Enter #17 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #20 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #21 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #24 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5E7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-24 Traversed all nodes and not succeeded. Current Status:
+23 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5E7--6.
@@ -7585,10 +6060,7 @@ Enter #15 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #15 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
+Enter #16 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7596,7 +6068,7 @@ Enter #16 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
+Enter #17 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7604,15 +6076,7 @@ Enter #17 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
+Enter #18 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7621,7 +6085,7 @@ Enter #19 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
+Enter #19 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7629,7 +6093,7 @@ Enter #20 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
+Enter #20 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7637,7 +6101,7 @@ Enter #21 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
+Enter #21 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7645,7 +6109,7 @@ Enter #22 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
+Enter #22 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7653,229 +6117,7 @@ Enter #23 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5-7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
+22 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5-7--6.
@@ -7928,10 +6170,7 @@ Enter #15 recursive at node index [5] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Recursively checking #15 at node index [5] at its [0] th neighbour
-	Node: {'xy': (2, 5), 'value': 6, 'capacity': 2, 'neighbours': [{'node': (2, 2), 'position': 4}], 'is_completed': True, 'position': 5}
-Failed Trying to 0 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
+Enter #16 recursive at node index [6] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7939,7 +6178,7 @@ Enter #16 recursive at node index [5] at its [-1] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
+Enter #17 recursive at node index [7] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7947,15 +6186,7 @@ Enter #17 recursive at node index [6] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
+Enter #18 recursive at node index [8] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7964,7 +6195,7 @@ Enter #19 recursive at node index [8] at its [-2] th neighbour
 #.|..#.
 6E7EE6.
 HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
+Enter #19 recursive at node index [9] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7972,7 +6203,7 @@ Enter #20 recursive at node index [9] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
+Enter #20 recursive at node index [10] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7980,7 +6211,7 @@ Enter #21 recursive at node index [10] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
+Enter #21 recursive at node index [11] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7988,7 +6219,7 @@ Enter #22 recursive at node index [11] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
+Enter #22 recursive at node index [12] at its [-2] th neighbour
 2.6--5.
 ..#..|.
 5=7--6.
@@ -7996,229 +6227,7 @@ Enter #23 recursive at node index [12] at its [-2] th neighbour
 7E7EE8.
 #.|..#.
 6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -1 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -2 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Failed Trying to -3 build(s) at #15 stack since cur node is completed
-Enter #16 recursive at node index [5] at its [-1] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #17 recursive at node index [6] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #18 recursive at node index [7] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #19 recursive at node index [8] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-HERE??
-Enter #20 recursive at node index [9] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #21 recursive at node index [10] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #22 recursive at node index [11] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-Enter #23 recursive at node index [12] at its [-2] th neighbour
-2.6--5.
-..#..|.
-5=7--6.
-|....".
-7E7EE8.
-#.|..#.
-6E7EE6.
-23 Traversed all nodes and not succeeded. Current Status:
+22 Traversed all nodes and not succeeded. Current Status:
 2.6--5.
 ..#..|.
 5=7--6.
