@@ -177,16 +177,15 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
     print(f"Updating neighbours on the side of ends: {ends}")
     # Update affected nodes due to new bridge
     # TODO: add neighbours back if bridge destroyed
-    if (bridge_idx == -1):
-        if (x0==x1):
-            for i in range(ends[0][1]+1,ends[1][1]):
-                # print(f"{(x0, i)}")
-                update_islands_perpendicular_to_bridge(True, x0, i, i_map, nrow, ncol, nodes, val)
-        else:
-        # print(ends[0][0]+1,ends[0][1])
-            for i in range(ends[0][0]+1,ends[1][0]):
-                # print(f"{(i, y0)}")
-                update_islands_perpendicular_to_bridge(False, i, y0, i_map, nrow, ncol, nodes, val)
+    if (x0==x1):
+        for i in range(ends[0][1]+1,ends[1][1]):
+            # print(f"{(x0, i)}")
+            update_islands_perpendicular_to_bridge(True, x0, i, i_map, nrow, ncol, nodes, val)
+    else:
+    # print(ends[0][0]+1,ends[0][1])
+        for i in range(ends[0][0]+1,ends[1][0]):
+            # print(f"{(i, y0)}")
+            update_islands_perpendicular_to_bridge(False, i, y0, i_map, nrow, ncol, nodes, val)
 
     # Update the node capacity
     idx_1 = find_node(node_1, nodes)
@@ -250,13 +249,13 @@ def remove_for_max_bridge(node_0, node_1):
         print(f"Removed {info_0} from {node_1}")
     else:
         print(f"This shouldn't happent.\n\tNeighbours: {node_1}")
-        quit()
+        # quit()
     if (info_1 in node_0['neighbours']):
         node_0['neighbours'].remove(info_1)
         print(f"Removed {info_1} from {node_0}")
     else:
         print(f"This shouldn't happent.\n\tNeighbours: {node_0}")
-        quit()
+        # quit()
 
 def add_neighbours_back(node_0, node_1, nodes):
     print(f"======\nAdding neighbours back for\n\t{node_0}\nand\n\t{node_1}\n======")
