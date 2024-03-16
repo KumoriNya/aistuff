@@ -474,14 +474,14 @@ def solve(i_map, node_dict_list, bridge_dict_list, nrow, ncol, i, j, is_test):
 
 def check_exhaustion(nodes):
     for node in nodes: 
-        if (not node['is_completed']): return False
+        if (node['capacity'] != 0): return False
     return True
 
 #   nrow and ncol included for building bridges
 def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, non_reduce, stack_count):
     # Check returning conditions
     print(f"Enter #{stack_count} recursive at node index [{node_idx}] at its [{neighbour_idx - 1}] th neighbour")
-    if is_test: print_map(nrow, ncol, i_map)
+    # if is_test: print_map(nrow, ncol, i_map)
     if check_exhaustion(nodes): return True
     if node_idx == len(nodes):
         # All nodes traversed, but not exhausted -> no solution found
@@ -489,14 +489,17 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
         if is_test: print_map(nrow, ncol, i_map)
         return False
 
+
     node = nodes[node_idx]
+    if node['capacity'] == 0:
+        # Early end recursive due to current stack exhausts the current node
+        return recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)
     neighbours = node['neighbours']
     if neighbour_idx == -1:
         neighbour_idx = len(neighbours)
         if (node_idx == 8 and neighbour_idx == -1): print(f"NI Updated to be {neighbour_idx}")
     if neighbour_idx == 0 or len(neighbours) == 0:
         # Indicate that current neighbour has all been iterated.
-        if (node_idx == 8 and neighbour_idx == 0): print(f"HERE??")
         return recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)
     neighbour = neighbours[neighbour_idx - 1]
 
@@ -505,22 +508,40 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
     for build_bridge_val in reversed(range(-3, 1)):
         bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
         # Avoid downgrading lemma bridge values
-        if (bridge_idx != -1 and bridge_idx < non_reduce and bridges[bridge_idx]['lemma_val'] < build_bridge_val):
-            print(f"Failed Trying to {build_bridge_val} build(s) at #{stack_count} stack since {bridge_idx} < {non_reduce}.")
-            build_bridge(node['xy'], neighbour['node'], node_idx, i_map, 0, nrow, ncol, nodes, bridges)
-            build_bridge(node['xy'], neighbour['node'], node_idx, i_map, bridges[bridge_idx]['lemma_val'], nrow, ncol, nodes, bridges)
-            pass
+        if (bridge_idx != -1 and bridge_idx < non_reduce):
+            if (bridges[bridge_idx]['lemma_val'] <= build_bridge_val):
+                print(f"Failed Trying to {build_bridge_val} build(s) at #{stack_count} stack since {bridge_idx} < {non_reduce}.")
+                pass
+            else:
+                print(f"Upgrading lemma bridge {bridges[bridge_idx]}")
+                # build_bridge(node['xy'], neighbour['node'], node_idx, i_map, 0, nrow, ncol, nodes, bridges)
+                # build_bridge(node['xy'], neighbour['node'], node_idx, i_map, bridges[bridge_idx]['lemma_val'], nrow, ncol, nodes, bridges)
+                build_bridge(node['xy'], neighbour['node'], node_idx, i_map, build_bridge_val, nrow, ncol, nodes, bridges)
         else:
-            # Node completed during stack calling
-            if (node['capacity'] > 0 and not node['is_completed']):
+            neighbour_node = nodes[neighbour['position']]
+            # Neighbour exhausted by bridge building from previous iteration
+            # Since current neighbour is exhausted => go to next neighbour
+            if (neighbour_node['capacity'] == 0):
+                if recur(i_map, nodes, bridges, node_idx, neighbour_idx - 1, is_test, nrow, ncol, non_reduce, stack_count + 1): return True
+            # Neighbours all iterated (i.e. a bridge from the current island to all neighbours with at least 0 bridges)
+            # If current node not exhausted, try to build bridge with the next available neighbour
+            elif (node['capacity'] > 0):
                 print(f"Trying to {build_bridge_val} build(s) at #{stack_count} stack from {node['xy']} to {neighbour['node']}.")
                 if (node['xy'] == (4,5) and neighbour['node'] == (2,5) and build_bridge_val == -3):
                     print(node)
                 build_bridge(node['xy'], neighbour['node'], node_idx, i_map, build_bridge_val, nrow, ncol, nodes, bridges)
                 if (is_test): print(f"Built {int(-build_bridge_val)} bridge from {node['xy']} to {neighbour['node']}")
-            else: print(f"Failed Trying to {build_bridge_val} build(s) at #{stack_count} stack since cur node is completed")
+            # Node exhausted from previous iteration on neighbours => go to next node
+            else:
+                print(f"Failed Trying to {build_bridge_val} build(s) at #{stack_count} stack since cur node is completed")
+                if (recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)): return True
         if (recur(i_map, nodes, bridges, node_idx, neighbour_idx - 1, is_test, nrow, ncol, non_reduce, stack_count + 1)): return True
+        elif build_bridge_val == -3:
+            build_bridge(node['xy'], neighbour['node'], node_idx, i_map, 0, nrow, ncol, nodes, bridges)
+            build_bridge(node['xy'], neighbour['node'], node_idx, i_map, bridges[bridge_idx]['lemma_val'], nrow, ncol, nodes, bridges)
     
+    
+
     return False
 
 
@@ -562,34 +583,36 @@ def main():
     #     print(node)
     # For all nodes, try apply the lemma to link islands that must be connected before applying other search strategies
     init_complete = False
-    print("Start checking lemma")
-    while (not init_complete):
-        init_complete = True
-        print(f"\n\nIterating\n\n")
-        for idx, node in enumerate(nodes):
-            # May also want to update check_lemma to iterate using the list of dict
-            if check_lemma(node):
-                print(f"Node: {node['xy']} satisfies lemma. Building bridges.")
-                init_complete = False
-                neighbours = node['neighbours']
-                if len(neighbours) == 1:
-                    if (bridge_contains(node['xy'], neighbour['node'], bridges)):
-                        build_bridge(node['xy'], neighbours[0]['node'], idx, i_map, 0, nrow, ncol, nodes, bridges)
-                        build_bridge(node['xy'], neighbours[0]['node'], idx, i_map, -node['capacity'], nrow, ncol, nodes, bridges)
-                elif (node['capacity'] == (len(node['neighbours']) * MAX_BRIDGE_NUM)):
-                    for neighbour in neighbours:
-                        build_bridge(node['xy'], neighbour['node'], idx, i_map, -3, nrow, ncol, nodes, bridges)
-                elif (node['value'] == (len(node['neighbours']) * MAX_BRIDGE_NUM)):
-                    for neighbour in neighbours:
-                        bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
-                        build_bridge(node['xy'], neighbour['node'], idx, i_map, -3, nrow, ncol, nodes, bridges)
-                else:
-                    for neighbour in neighbours:
-                        build_bridge(node['xy'], neighbour['node'], idx, i_map, -1, nrow, ncol, nodes, bridges)
-                # Post-Lemma Pre-DFS map result
-    print("finished checking lemma")
-    print_map(nrow, ncol, i_map)
-    print()
+    check_lemma = False
+    if (check_lemma):
+        print("Start checking lemma")
+        while (not init_complete):
+            init_complete = True
+            print(f"\n\nIterating\n\n")
+            for idx, node in enumerate(nodes):
+                # May also want to update check_lemma to iterate using the list of dict
+                if check_lemma(node):
+                    print(f"Node: {node['xy']} satisfies lemma. Building bridges.")
+                    init_complete = False
+                    neighbours = node['neighbours']
+                    if len(neighbours) == 1:
+                        if (bridge_contains(node['xy'], neighbour['node'], bridges)):
+                            build_bridge(node['xy'], neighbours[0]['node'], idx, i_map, 0, nrow, ncol, nodes, bridges)
+                            build_bridge(node['xy'], neighbours[0]['node'], idx, i_map, -node['capacity'], nrow, ncol, nodes, bridges)
+                    elif (node['capacity'] == (len(node['neighbours']) * MAX_BRIDGE_NUM)):
+                        for neighbour in neighbours:
+                            build_bridge(node['xy'], neighbour['node'], idx, i_map, -3, nrow, ncol, nodes, bridges)
+                    elif (node['value'] == (len(node['neighbours']) * MAX_BRIDGE_NUM)):
+                        for neighbour in neighbours:
+                            bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
+                            build_bridge(node['xy'], neighbour['node'], idx, i_map, -3, nrow, ncol, nodes, bridges)
+                    else:
+                        for neighbour in neighbours:
+                            build_bridge(node['xy'], neighbour['node'], idx, i_map, -1, nrow, ncol, nodes, bridges)
+                    # Post-Lemma Pre-DFS map result
+        print("finished checking lemma")
+        print_map(nrow, ncol, i_map)
+        print()
             # else:
                 # print("Lemma unsatisfied\n")
     
