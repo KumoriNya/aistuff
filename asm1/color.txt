@@ -1,0 +1,1 @@
+Here is a [31;1mred[0m word and one in [33;1myellow![0m

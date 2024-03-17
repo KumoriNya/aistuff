@@ -61,7 +61,7 @@ nodes = []
 # }
 bridges = []
 MAX_BRIDGE_NUM = 3
-
+bridge_tuning = True
 def find_vert(x, y, i_map, nrow):
     hori_neightbours = []
     for i in reversed(range(0, x)):
@@ -140,7 +140,7 @@ def bridge_uncolor_all():
 
 # idx = idx of node_0
 def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
-    print(f"--------------------------------------\nTrying to build {-val} bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]}")
+    if bridge_tuning: print(f"--------------------------------------\nTrying to build {-val} bridge from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]}")
     bridge_uncolor_all()
     (x0, y0) = node_0
     (x1, y1) = node_1
@@ -182,7 +182,7 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
             'lemma_val':val,
             'is_new': True,
         })
-    print(f"Updating neighbours on the side of ends: {ends}")
+    if bridge_tuning: print(f"Updating neighbours on the side of ends: {ends}")
     # Update affected nodes due to new bridge
     # TODO: add neighbours back if bridge destroyed
     if (x0==x1):
@@ -194,7 +194,7 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
         for i in range(ends[0][0]+1,ends[1][0]):
             # print(f"{(i, y0)}")
             update_islands_perpendicular_to_bridge(False, i, y0, i_map, nrow, ncol, nodes, val)
-
+    if bridge_tuning: print(f"Checking point 1: {nodes[0]}, {nodes[1]}")
     # Update the node capacity
     idx_1 = find_node(node_1, nodes)
     nodes[idx]['capacity'] += (val- pre_operation_bridge_val)
@@ -203,15 +203,19 @@ def build_bridge(node_0, node_1, idx, i_map, val, nrow, ncol, nodes, bridges):
     # Update neighbours
     if (bridges[bridge_idx]['val'] == -3):
         remove_for_max_bridge(nodes[idx], nodes[idx_1])
+        if bridge_tuning: print(f"Checking point 2: {nodes[0]}, {nodes[1]}")
     if (nodes[idx]['capacity'] == 0):
         # Current node satisfied. Remove it from others list
         remove_current_node_in_neighbours_storage(nodes[idx])
+        if bridge_tuning: print(f"Checking point 3: {nodes[0]}, {nodes[1]}")
     if (nodes[idx_1]['capacity'] == 0):
         # Remove it from others list
         remove_current_node_in_neighbours_storage(nodes[idx_1])
+        if bridge_tuning: print(f"Checking point 4: {nodes[0]}, {nodes[1]}")
     if (val == 0):
         add_neighbours_back(nodes[idx], nodes[idx_1], nodes)
-    print(f"Bridge({val}) from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]} built\nAffected nodes:\n\t{nodes[idx]}\n\t{nodes[idx_1]}\nBridge:\n\t{bridges[bridge_idx]}\n--------------------------------------\n")
+        if bridge_tuning: print(f"Checking point 5: {nodes[0]}, {nodes[1]}")
+    if bridge_tuning: print(f"Bridge({val}) from {node_0} = {i_map[node_0]} to {node_1} = {i_map[node_1]} built\nAffected nodes:\n\t{nodes[idx]}\n\t{nodes[idx_1]}\nBridge:\n\t{bridges[bridge_idx]}\n--------------------------------------\n")
     return 0
 
 def update_islands_perpendicular_to_bridge(is_hor, x, y, i_map, nrow, ncol, nodes, bridge_val):
@@ -234,13 +238,15 @@ def update_islands_perpendicular_to_bridge(is_hor, x, y, i_map, nrow, ncol, node
             # Removes
             node0['neighbours'].remove(info1)
             node1['neighbours'].remove(info0)
-            print(f"Due to bridge between built, Removed nodes {node_0} and {node_1} from their neighbours list")
-            print(f"\t{node0}\n\t{node1}")
+            if bridge_tuning: 
+                print(f"Due to bridge between built, Removed nodes {node_0} and {node_1} from their neighbours list")
+                print(f"\t{node0}\n\t{node1}")
         elif bridge_val == 0 and (info1 not in node0['neighbours'] and info0 not in node1['neighbours']):
             node0['neighbours'].append(info1)
             node1['neighbours'].append(info0)
-            print(f"Due to bridge between destroyed, Added nodes {node_0} and {node_1} to their neighbours list")
-            print(f"\t{node0}\n\t{node1}")
+            if bridge_tuning: 
+                print(f"Due to bridge between destroyed, Added nodes {node_0} and {node_1} to their neighbours list")
+                print(f"\t{node0}\n\t{node1}")
             
 
 def remove_for_max_bridge(node_0, node_1):
@@ -254,19 +260,19 @@ def remove_for_max_bridge(node_0, node_1):
     }
     if (info_0 in node_1['neighbours']):
         node_1['neighbours'].remove(info_0)
-        print(f"Removed {info_0} from {node_1}")
+        if bridge_tuning: print(f"Removed {info_0} from {node_1}")
     else:
         print(f"THIS SHOULDNT HAPPEN.\n\tNeighbours: {node_1}")
         # quit()
     if (info_1 in node_0['neighbours']):
         node_0['neighbours'].remove(info_1)
-        print(f"Removed {info_1} from {node_0}")
+        if bridge_tuning: print(f"Removed {info_1} from {node_0}")
     else:
         print(f"THIS SHOULDNT HAPPEN.\n\tNeighbours: {node_0}")
         # quit()
 
 def add_neighbours_back(node_0, node_1, nodes):
-    print(f"======\nAdding neighbours back for\n\t{node_0}\nand\n\t{node_1}\n======")
+    if bridge_tuning: print(f"======\nAdding neighbours back for\n\t{node_0}\nand\n\t{node_1}\n======")
     info_0 = {
         'node':     node_0['xy'],
         'position': node_0['position'],
@@ -295,8 +301,8 @@ def add_neighbours_back(node_0, node_1, nodes):
                 other_end = nodes[o_idx]
                 # and other end is not completed
                 if other_end['capacity'] > 0 and info_0 not in other_end['neighbours']:
-                    other_end['neighbours'].append(info_0)
-                    node_0['neighbours'].append(info_o)
+                    add_helper(info_0, other_end['neighbours'])
+                    add_helper(info_o, node_0['neighbours'])
         if (node_1['xy'] in bridge['ends'] and bridge['val'] > -3):
             # check if each other is free to add neighbour
             # obtain other end info
@@ -315,23 +321,37 @@ def add_neighbours_back(node_0, node_1, nodes):
                 other_end = nodes[o_idx]
                 # and other end is not completed
                 if other_end['capacity'] > 0 and info_1 not in other_end['neighbours']:
-                    other_end['neighbours'].append(info_1)
-                    node_1['neighbours'].append(info_o)
+                    add_helper(info_1, other_end['neighbours'])
+                    add_helper(info_o, node_1['neighbours'])
     if (node_0['capacity'] > 0):
         node_0['is_completed'] = False
     if (node_1['capacity'] > 0):
         node_1['is_completed'] = False
+    if bridge_tuning: print(f"======\nAdded neighbours back for\n\t{node_0}\nand\n\t{node_1}\n======")
+
+def add_helper(info, lst):
+    if len(lst) == 0:
+        lst.append(info)
+    else:
+        for idx, neighbour in enumerate(lst):
+            # print(f"In add helpers, neighbour:\n\t{neighbour}\n\t{info}")
+            if (info['position'] < neighbour['position']):
+                lst.insert(idx, info)
+                return
+        lst.append(info)
+
 def remove_current_node_in_neighbours_storage(node):
-    # print(f"Removing\n\t{node}\n\tfrom:")
+    print(f"Removing\n\t{node}\n\tfrom:")
     self_info = {
             'node': node['xy'],
             'position': node['position']
         }
     for neighbour in node['neighbours']:
-        # print(nodes[neighbour['position']]['neighbours'])
-        if self_info in nodes[neighbour['position']]['neighbours']:
-            nodes[neighbour['position']]['neighbours'].remove(self_info)
-        # print(f"Removed\n\t{node}\nfrom\n\t{nodes[neighbour['position']]}")
+        neighbour_node = nodes[neighbour['position']]
+        print(neighbour_node['neighbours'])
+        if self_info in neighbour_node['neighbours']:
+            neighbour_node['neighbours'].remove(self_info)
+            print(f"Removed\n\t{node}\nfrom\n\t{neighbour_node}")
     node['neighbours'] = []
     node['is_completed'] = True
         
@@ -391,7 +411,8 @@ def check_exhaustion(nodes):
         
 def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, non_reduce, stack_count):
     # Check returning conditions
-    print(f"Enter #{stack_count} recursive at node index [{node_idx}] at its [{neighbour_idx}] th neighbour")
+    if (is_test):
+        print(f"Enter #{stack_count} recursive at node index [{node_idx}] at its [{neighbour_idx}] th neighbour")
     # if is_test: print_map(nrow, ncol, i_map)
     if check_exhaustion(nodes): return True
     if node_idx == len(nodes):
@@ -400,30 +421,44 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
         if is_test: print_map(nrow, ncol, i_map)
         return False
 
-
+    
     node = nodes[node_idx]
+    if is_test: print(f"Stack #{stack_count}, node#{node['position']}: {node}")
     if node['capacity'] == 0:
         # Early end recursive due to current stack exhausts the current node
         if recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1):
             return True
     neighbours = node['neighbours']
     # This indicates the current allocation of resource leaves one node unsatisfied. Thus this allocation must be wrong 
+    if is_test: print(f"Stack #{stack_count}, neighbours: {neighbours}")
     if (len(neighbours) == 0 and node['capacity'] > 0):
         if is_test: print(f"THIS SHOULD only come out in invalid tests, {node}")
         return False
+    elif (len(neighbours) == 0 and node['capacity'] == 0):
+        if is_test: print(F"Stack#{stack_count} satisfied node#{node['position']}: {node} during iteration call")
+        # Dont return straightaway because earlier stack might not be satisfied, and we need to 
+        if (recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)): return True
     if neighbour_idx == -1:
         neighbour_idx = len(neighbours)
-        if (node_idx == 8 and neighbour_idx == -1): print(f"NI Updated to be {neighbour_idx}")
+    # Bridge established in iteration call satisfied multiple neighbours
+    while (neighbour_idx > len(neighbours)):
+        neighbour_idx -= 1
     if neighbour_idx == 0:
         # Indicate that current neighbour has all been iterated.
         return recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)
+    # if is_test: print(f"NIDX #{stack_count}, {neighbour_idx}")
     neighbour = neighbours[neighbour_idx - 1]
+    if is_test: print(f"Stack #{stack_count}, neighbour#{neighbour_idx}: {neighbour}")
+    
+    # If no available neighbour, return False?
 
-    # Only build backwards
+    # Only build forward
     if is_test: print(f"Recursively checking #{stack_count} at node index [{node_idx}] at its [{neighbour_idx - 1}] th neighbour\n\tNode: {nodes[node_idx]}")
-    if (neighbour['position'] < node['position']):
-        for build_bridge_val in reversed(range(-3, 1)):
+    # if (neighbour['position'] < node['position']):
+    if (node['position'] < neighbour['position']):
+        for build_bridge_val in reversed(range(-3, 0)):
             bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
+            neighbour_node = nodes[neighbour['position']]
             # Try Build Bridge Block
             # Avoid downgrading lemma bridge values
             if (bridge_idx != -1 and bridge_idx < non_reduce):
@@ -431,15 +466,17 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
                     print(f"Failed Trying to {build_bridge_val} build(s) at #{stack_count} stack since {bridge_idx} < {non_reduce}.")
                     pass
                 else:
-                    print(f"Stack #{stack_count} Upgrading lemma bridge {bridges[bridge_idx]}")
-                    # build_bridge(node['xy'], neighbour['node'], node_idx, i_map, 0, nrow, ncol, nodes, bridges)
-                    # build_bridge(node['xy'], neighbour['node'], node_idx, i_map, bridges[bridge_idx]['lemma_val'], nrow, ncol, nodes, bridges)
-                    build_bridge(node['xy'], neighbour['node'], node_idx, i_map, build_bridge_val, nrow, ncol, nodes, bridges)
-                    if (is_test): 
-                        print_map(nrow, ncol, i_map)
-                        print(f"Built {int(-build_bridge_val)} bridge from {node['xy']} to {neighbour['node']}\n==================================================================\n")
+                    if (neighbour_node['capacity'] == 0 or node['capacity'] == 0):
+                        if (recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)): return True
+                    else:
+                        print(f"Stack #{stack_count} Upgrading lemma bridge {bridges[bridge_idx]}")
+                        # build_bridge(node['xy'], neighbour['node'], node_idx, i_map, 0, nrow, ncol, nodes, bridges)
+                        # build_bridge(node['xy'], neighbour['node'], node_idx, i_map, bridges[bridge_idx]['lemma_val'], nrow, ncol, nodes, bridges)
+                        build_bridge(node['xy'], neighbour['node'], node_idx, i_map, build_bridge_val, nrow, ncol, nodes, bridges)
+                        if (is_test): 
+                            print_map(nrow, ncol, i_map)
+                            print(f"Built {int(-build_bridge_val)} bridge from {node['xy']} to {neighbour['node']}\n==================================================================\n")
             else:
-                neighbour_node = nodes[neighbour['position']]
                 # Neighbour exhausted by bridge building from previous iteration
                 # Since current neighbour is exhausted => go to next neighbour
                 # Neighbours all iterated (i.e. a bridge from the current island to all neighbours with at least 0 bridges)
@@ -447,7 +484,8 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
                 if (neighbour_node['capacity'] == 0 or node['capacity'] == 0):
                     # During iteration, current neighbour exhausted or node exhausted
                     #   => recur on next node
-                    if (recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)): return True
+                    if (recur(i_map, nodes, bridges, node_idx + 1, -1, is_test, nrow, ncol, non_reduce, stack_count + 1)): 
+                        return True
                 # Node exhausted from previous iteration on neighbours => go to next node
                 else:
                     if is_test: print(f"Stack #{stack_count} Trying to {-build_bridge_val} build(s) at #{stack_count} stack from {node['xy']} to {neighbour['node']}.")
@@ -463,7 +501,8 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
                     build_bridge(node['xy'], neighbour['node'], node_idx, i_map, bridges[bridge_idx]['lemma_val'], nrow, ncol, nodes, bridges)
     else:
         if (recur(i_map, nodes, bridges, node_idx, neighbour_idx - 1, is_test, nrow, ncol, non_reduce, stack_count + 1)): return True
-
+    if (is_test):
+        print(f"Stack #{stack_count} failed [{node_idx}] at its [{neighbour_idx}] th neighbour")
     return False
 
 # only_map = False
@@ -503,8 +542,19 @@ def main():
             #     'node': node['xy'],
             #     'position': node_idx,
             # })
-        node['neighbours'] = new
+        node['neighbours'] = []
+        for info in new:
+            add_helper(info, node['neighbours'])
+        
+    
+    # for node in nodes:
+    #     print(node)
 
+    for node_idx, node in enumerate(nodes):
+        neighbours = node['neighbours']
+        for neighbour in neighbours:
+            if (bridge_contains(node['xy'], neighbour['node'], bridges) < 0):
+                build_bridge(node['xy'], neighbour['node'], node_idx, i_map, 0, nrow, ncol, nodes, bridges)
     # print(f"Initialisation complete:")
     # for node in nodes:
     #     print(node)
@@ -548,6 +598,7 @@ def main():
     sys.setrecursionlimit(10000)
     tuning = True
     # solve(i_map, nodes, bridges, nrow, ncol, 0, 0, tuning)
+    print("INITIALISATION COMPLETE")
     recur(i_map, nodes, bridges, 0, -1, tuning, nrow, ncol, len(bridges), 0)
     print_map(nrow, ncol, i_map)
     # if (solve(i_map, dfs_nodes, dfs_bridges, nrow, ncol)):
