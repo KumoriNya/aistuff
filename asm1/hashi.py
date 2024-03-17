@@ -428,6 +428,7 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
         if is_test: print_map(nrow, ncol, i_map)
         return False
     # Add an additional check for nodes after the current idx, whether it's still meaningful to iterate based on the allocation
+    # Probably only useful for forward search? Should get something for backwards search as well
     if not check_remaining_nodes_availability(node_idx):
         return False
     
@@ -464,8 +465,10 @@ def recur(i_map, nodes, bridges, node_idx, neighbour_idx, is_test, nrow, ncol, n
 
     # Only build forward
     if is_test: print(f"Recursively checking #{stack_count} at node index [{node_idx}] at its [{neighbour_idx - 1}] th neighbour\n\tNode: {nodes[node_idx]}")
+    # Trying forward to see if it works for sample 10 * 20
     # if (neighbour['position'] < node['position']):
-    if (node['position'] < neighbour['position']):
+    # Backward
+    if (node['position'] > neighbour['position']):
         for build_bridge_val in reversed(range(-3, 0)):
             bridge_idx = bridge_contains(node['xy'], neighbour['node'], bridges)
             neighbour_node = nodes[neighbour['position']]
@@ -668,9 +671,10 @@ def main():
                 
                 # Post-Lemma Pre-DFS map result
             print(f"Lemma iteration {lmc}")
-            # print_map(nrow, ncol, i_map)
-            # print()
+            print_map(nrow, ncol, i_map)
+            print()
         print("finished checking lemma")
+        # return 0
         print_map(nrow, ncol, i_map)
         print()
             # else:
